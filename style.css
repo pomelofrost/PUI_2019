@@ -50,3 +50,138 @@ table {
 
 /*************** CUSTOM CSS *****************/
 
+body {
+	font-family: franklin-gothic-urw, sans-serif;
+	/* margin: 3em; */
+	background-color:#FFF3D8;
+}
+
+nav{
+	display:flex;
+	justify-content: space-between;
+	flex-grow:2;
+	background-color:#FFEFCE;
+	padding:3em;
+
+}
+
+.navWrapper{
+	display: flex;
+	justify-content: space-between;
+}
+h1 {
+	font-size: 7em;
+	color: #FFDDAE;
+	font-weight:700;
+	text-align:center;
+	letter-spacing: -3px;
+}
+
+h2{
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
+h3{
+	font-size: 1.5em;
+	font-weight:500;
+}
+
+h4{
+	font-weight:300;
+	font-size:4em;
+	padding-right:6em;
+}
+
+a{
+	text-decoration: none;
+	color:black;
+	padding-left: 1em;
+	padding-right:1em;
+}
+
+a:visited{
+	text-decoration: none;
+	color:black;
+}
+
+.orderButton{
+	border: 2px solid black;
+	border-radius: 20px;
+	padding-top:0.2em;
+	padding-bottom:0.2em;
+}
+
+.splash{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+}
+
+.bunWrapper{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-evenly;
+	margin:4em;
+}
+
+.bunWrapper div{
+	margin:3em;
+}
+
+.bunWrapper h2{
+	color:#6F593A;
+	text-align:center;
+}
+
+.productDescription{
+	display:flex;
+	justify-content:center;
+	padding: 2em 4em 4em 8em;
+}
+
+.productDescription img{
+	width:40%;
+}
+
+.text{
+	padding-top: 6em;
+	padding-right:8em;
+}
+
+.textWrapper{
+	padding-top: 4em;
+}
+.infoWrapper{
+	padding-top:2em;
+	display:flex;
+}
+
+.infoWrapper div{
+	padding-right:3em;
+}
+
+p{
+	font-size: 1.5em;
+	color:#6F593A;
+	padding-bottom:3em;
+}
+
+.infoWrapper p{
+	padding-bottom:1em;
+}
+
+.infoWrapper h3{
+	padding-bottom:1em;
+}
+.locationWrapper{
+	background-color: #FFFBF0;
+	display:flex;
+}
+
+.locationWrapper img{
+	width:40%;
+	height:40%;
+	padding:3em;
+}
