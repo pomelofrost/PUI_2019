@@ -198,17 +198,24 @@ span{
 	padding:3em;
 }
 .widget{
-	padding-left:4em;
-	padding-right:4em;
+	padding-left:8em;
+	padding-right:8em;
 	padding-top: 3em;
 	display:flex;
 	justify-content:space-around;
 }
 
+.widget div{
+	margin:1em 20em 0em 2em;
+}
+.widget p{
+	padding-bottom:2em;
+}
+
 input[type=text] {
 	padding: 6px;
-	width:70%;
-	border: 2px solid black;
+	width:80%;
+	border: 1px solid black;
 	border-radius:24px;
 	background-color:#FFF3D8;
 	font-size: 17px;
@@ -216,13 +223,11 @@ input[type=text] {
   
 .widget  button {
 	float: right;
-	padding: 6px 10px;
-	margin-top: 8px;
+	padding: 3px 3px;
 	margin-right: 16px;
 	background-color:#FFF3D8;
-	font-size: 17px;
+	font-size: 24px;
 	border: none;
-	cursor: pointer;
   }
 
 /* Homepage Location section */
