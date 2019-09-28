@@ -56,19 +56,7 @@ body {
 	background-color:#FFF3D8;
 }
 
-nav{
-	display:flex;
-	justify-content: space-between;
-	flex-grow:2;
-	background-color:#FFEFCE;
-	padding:3em;
-
-}
-
-.navWrapper{
-	display: flex;
-	justify-content: space-between;
-}
+/* typography */
 h1 {
 	font-size: 7em;
 	color: #FFDDAE;
@@ -105,6 +93,22 @@ a:visited{
 	color:black;
 }
 
+
+/* navigation */
+nav{
+	display:flex;
+	justify-content: space-between;
+	flex-grow:2;
+	background-color:#FFEFCE;
+	padding:3em;
+
+}
+
+.navWrapper{
+	display: flex;
+	justify-content: space-between;
+}
+
 .orderButton{
 	border: 2px solid black;
 	border-radius: 20px;
@@ -112,11 +116,82 @@ a:visited{
 	padding-bottom:0.2em;
 }
 
+/* homepage */
 .splash{
 	display:block;
 	margin-left: auto;
 	margin-right: auto;
 	width: 60%;
+}
+
+/* Search delivery address section */
+.deliveryWrapper{
+	padding:3em;
+}
+.widget{
+	padding-left:8em;
+	padding-right:8em;
+	padding-top: 3em;
+	display:flex;
+	justify-content:space-around;
+}
+
+.widget div{
+	margin:1em 20em 0em 2em;
+}
+.widget p{
+	padding-bottom:2em;
+}
+
+input[type=text] {
+	padding: 6px;
+	width:80%;
+	border: 1px solid black;
+	border-radius:24px;
+	background-color:#FFF3D8;
+	font-size: 17px;
+  }
+  
+.widget  button {
+	float: right;
+	padding: 3px 3px;
+	margin-right: 16px;
+	background-color:#FFF3D8;
+	font-size: 24px;
+	border: none;
+  }
+
+/* Homepage Location section */
+.locationWrapper{
+	background-color: #FFFBF0;
+	display:flex;
+}
+
+.locationWrapper img{
+	width:40%;
+	height:40%;
+	padding:3em;
+}
+
+.textWrapper{
+	padding-top: 4em;
+}
+
+.infoWrapper{
+	padding-top:2em;
+	display:flex;
+}
+
+.infoWrapper p{
+	padding-bottom:1em;
+}
+
+.infoWrapper h3{
+	padding-bottom:1em;
+}
+
+.infoWrapper div{
+	padding-right:3em;
 }
 
 /* proudcts page bun display */
@@ -193,72 +268,3 @@ span{
 	background-color:#914900;
 }
 
-/* Search delivery address section */
-.deliveryWrapper{
-	padding:3em;
-}
-.widget{
-	padding-left:8em;
-	padding-right:8em;
-	padding-top: 3em;
-	display:flex;
-	justify-content:space-around;
-}
-
-.widget div{
-	margin:1em 20em 0em 2em;
-}
-.widget p{
-	padding-bottom:2em;
-}
-
-input[type=text] {
-	padding: 6px;
-	width:80%;
-	border: 1px solid black;
-	border-radius:24px;
-	background-color:#FFF3D8;
-	font-size: 17px;
-  }
-  
-.widget  button {
-	float: right;
-	padding: 3px 3px;
-	margin-right: 16px;
-	background-color:#FFF3D8;
-	font-size: 24px;
-	border: none;
-  }
-
-/* Homepage Location section */
-.locationWrapper{
-	background-color: #FFFBF0;
-	display:flex;
-}
-
-.locationWrapper img{
-	width:40%;
-	height:40%;
-	padding:3em;
-}
-
-.textWrapper{
-	padding-top: 4em;
-}
-
-.infoWrapper{
-	padding-top:2em;
-	display:flex;
-}
-
-.infoWrapper p{
-	padding-bottom:1em;
-}
-
-.infoWrapper h3{
-	padding-bottom:1em;
-}
-
-.infoWrapper div{
-	padding-right:3em;
-}
