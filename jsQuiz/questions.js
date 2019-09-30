@@ -4,9 +4,9 @@ class Question {
     this.choices = choices;
     this.answer = answer;
 }
-isCorrectAnswer(choice){
-    return this.answer === choice;
-}
+    isCorrectAnswer(choice){
+        return this.answer === choice;
+    }
 }
 
 var questions = [
@@ -14,6 +14,8 @@ var questions = [
     new Question("Which language is used for styling web pages?", ["HTML", "JQuery", "CSS", "XML"], "CSS"),
     new Question("What has not been covered in PUI lab?", ["HTML", "CSS","Javascript", "Java"], "Java"),
     ];
+
+    new Question("Hyper Text Markup Language Stand For?", ["JavaScript", "XHTML","CSS", "HTML"], "HTML")
 
 
 class Quiz {
