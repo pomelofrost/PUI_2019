@@ -18,21 +18,24 @@ class Quiz {
         this.score = 0;
         this.questions = questions;
         this.questionIndex = 0;}
+     getQuestion() {
+
+            return this.questions[this.questionIndex];
+        
+        }
     guess(answer) {
         if(this.getQuestion().isCorrectAnswer(answer)) {
                 this.score++;
                     }
                 
-        this.questionIndex++;
-        
+        this.questionIndex++};
+    isEnded() {
+            return this.questionIndex === this.questions.length;
+        };
 }
 
-getQuestion() {
 
-    return this.questions[this.questionIndex];
 
-}
-}
 
 function guess(id, guess) {
     var button = document.getElementById(id);
@@ -75,7 +78,3 @@ function showScores() {
 
 var quiz = new Quiz(questions);
 populate();
-
-isEnded() {
-	return this.questionIndex === this.questions.length;
-}
