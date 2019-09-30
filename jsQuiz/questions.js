@@ -12,14 +12,20 @@ var questions = [
     new Question("What has not been covered in PUI lab?", ["HTML", "CSS","Javascript", "Java"], "Java"),
     ];
 
-    new Question("Hyper Text Markup Language Stand For?", ["JavaScript", "XHTML","CSS", "HTML"], "HTML")
 
 class Quiz {
     constructor(questions) {
         this.score = 0;
-this.questions = questions;
-        this.questionIndex = 0;
-}	
+        this.questions = questions;
+        this.questionIndex = 0;}
+    guess(answer) {
+        if(this.getQuestion().isCorrectAnswer(answer)) {
+                this.score++;
+                    }
+                
+        this.questionIndex++;
+        
+}
 
 getQuestion() {
 
@@ -34,15 +40,9 @@ function guess(id, guess) {
    	 quiz.guess(guess);
    	 populate();
     }
-};
-
-guess(answer) {
-    if(this.getQuestion().isCorrectAnswer(answer)) {
-   	 this.score++;
-    		}
-		
-		this.questionIndex++;
 }
+
+
 
 
 function populate() {
