@@ -206,7 +206,7 @@ input[type=text] {
 	margin:3em;
 }
 
-.bunWrapper h2{
+.bunWrapper h2,.choices h2{
 	color:#6F593A;
 	text-align:center;
 }
@@ -273,9 +273,10 @@ span{
 	display:flex;
 }
 
-/* clear styles */
-.glutenWrapper p{
-	padding:0;
+label{
+	font-size: 1.5em;
+	color:#6F593A;
+	padding: 1em 8em 1em 4em;
 }
 /* Hide default checkbox source: W3Schools*/
 .glutenWrapper input {
@@ -294,10 +295,23 @@ span{
 	width: 25px;
 	border-radius:4px;
 	border: 2px solid #6F593A;
-	background-color:#FFEFCE);
+	background-color:#FFEFCE;
+  }
+
+  
+/* On mouse-over, add a grey background color */
+.glutenWrapper:hover input ~ .newCheckbox {
+	background-color: rgb(184, 154, 112);
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .glutenWrapper input:checked ~ .newCheckbox {
+	background-color: #6f593a;
   }
 
 .choices{
+	padding-left:4em;
+	padding-right:4em;
 	display:flex;
 }
 
