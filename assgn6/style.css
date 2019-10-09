@@ -109,12 +109,28 @@ nav{
 	justify-content: space-between;
 }
 
-.orderButton{
+button{
 	border: 2px solid black;
 	border-radius: 20px;
 	padding-top:0.2em;
 	padding-bottom:0.2em;
 	margin-top:3em;
+	font-weight:300;
+	font-size:1em;
+}
+
+#cartNum {
+	border-radius: 50%;
+	width:1.2em;
+	height:1.2em;
+	background:orange;
+	color:white;
+    display: none;
+    text-align: center;
+	font-size: 0.8em;
+	z-index:200;
+	margin-left: -10px;
+	margin-top: 10px;
 }
 
 /* homepage */
@@ -243,8 +259,14 @@ p{
 	padding-bottom:1em;
 }
 
-.glazing{
+.glazingWrapper{
 	display:flex;
+	align-items: center;
+	/* justify-content: center; */
+}
+
+.glazingWrapper input{
+	visibility:hidden;
 }
 
 span{
@@ -252,20 +274,27 @@ span{
 	height:50px;
 	border-radius:50%;
 	margin:3px;
-}
-.none{
-	border:1px solid black;
+	cursor:pointer;
+	border-style:inset;
 }
 
-.vanilla{
+input:checked + span {
+    display:none;
+}
+
+#none{
+	background-color:paleturquoise;
+}
+
+#vanilla{
 	background-color:white;
 }
 
-.sugar{
+#sugar{
 	background-color:#ffb108;
 }
 
-.chocolate{
+#chocolate{
 	background-color:#914900;
 }
 

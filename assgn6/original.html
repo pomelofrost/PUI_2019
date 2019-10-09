@@ -7,6 +7,7 @@
     <title>Bun Bun Bake Shop</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/pei1qpk.css">
+    <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/1130118603.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -20,7 +21,8 @@
                 <h3><a href="product.html">Our Buns</a></h3>
                 <h3><a href="">About</a></h3>
                 <h3><a href="">Location</a></h3>
-                <h3><a href="" class="orderButton"><i class="fas fa-shopping-cart"></i></a></h3>
+                <h3><a href="cart.html" class="orderButton"><i class="fas fa-shopping-cart"></i>
+                <span id="cartNum"></span></a></h3>
             </div>
         </nav>
     </header>
@@ -33,11 +35,11 @@
                 <!-- right side -->
                 <span class="price"><h3>$3.5</h3></span>
                 <p>Glazing:</p>
-                <div class="glazing">
-                    <input type="radio"><span class="none"></span>
-                    <input type="radio"><span class="vanilla"></span>
-                    <input type="radio"><span class="sugar"></span>
-                    <input type="radio"><span class="chocolate"></span>
+                <div class="glazingWrapper" onclick="addGlazing()">
+                    <span id="none" onClick="none()"></span>
+                    <span id="vanilla" onClick="vanilla()"></span>
+                    <span id="sugar" onClick="sugar()"></span>
+                    <span id="chocolate" onClick="chocolate()"></span>
                 </div>
                 <p class="last"> Quantity:</p>
                 <select name="quantity" id="quantitySelect">
@@ -45,13 +47,11 @@
                     <option value="3">3</option>
                     <option value="6">6</option>
                     <option value="12">12</option>
-                </select>
-                <h3><a href="" class="orderButton">Order</a></h3>
+                </select><br>
+                <button id="order" onClick="order()">Order</button>
                 <p>Our bun is your bun. This original fan favorite is filled with gooey buttery goodness and delivered straight to your mouth in a hearty, cinnamon taste.</p>
                 <p class="last">Ingredients: Flouer, eggs, condensed milk, cinnamon, sugar</p>
-                
             </div>
-            
         </div>
     </main>
 </body>
