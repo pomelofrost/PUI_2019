@@ -319,6 +319,42 @@ select{
 	margin-bottom:3em;
 }
 
+/* cart page style */
+.cartWrapper{
+	margin: 3em;
+	display:flex;
+	justify-content: space-between;
+}
+
+.product{
+	display:flex;
+	justify-content:flex-start;
+}
+
+.product img{
+	width:50%
+}
+
+.product select{
+	width:60%;
+}
+
+.orderSummary{
+	border: 1px solid black;
+	padding: 2em;
+}
+
+.orderSummary span{
+	display:flex;
+	justify-content:space-between;
+}
+
+.orderSummary p{
+	font-size:1em;
+	font-weight:300;
+	color:black;
+}
+
 /* 
 .glutenWrapper{
 	display:flex;

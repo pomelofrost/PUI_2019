@@ -22,23 +22,32 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="cartWrapper">
+        <div class="left">
         <div class="back">
             back to shopping
         </div>
         <div class="product">
             <div>
-                <img src="bun.png" alt="">
+                <img src="img/bun.png" alt="">
             </div>
             <div>
-                <h4>Original Bun (Gluten-Free)</h4>
+                <h3>Original Bun (Gluten-Free)</h3>
                 <p>Glazing: None</p>
+                <p class="last"> Quantity:</p>
+                <select name="quantity" id="quantitySelect">
+                    <option value="1">1</option>
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                </select>
                 
             </div>
         </div>
+        </div>
         <div class="orderSummary">
             <div>
-                <h4>Order Summary</h4>
+                <h3>Order Summary</h3>
                 <span>
                     <p>Subtotal</p>
                     <p>$12.00</p>
