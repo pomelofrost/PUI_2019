@@ -266,7 +266,7 @@ p{
 .glazingWrapper{
 	display:flex;
 	align-items: center;
-	/* justify-content: center; */
+	margin-top:1em;
 }
 
 .glazingWrapper input{
@@ -282,6 +282,11 @@ span{
 	border-style:inset;
 }
 
+span p{
+	margin-top:3em;
+	text-align:center;
+	font-size:0.8em;
+}
 input:checked + span {
     display:none;
 }
