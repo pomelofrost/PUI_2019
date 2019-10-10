@@ -336,7 +336,8 @@ select{
 }
 
 .product select{
-	width:60%;
+	width:100%;
+	max-width:100%;
 }
 
 .orderSummary{
