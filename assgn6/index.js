@@ -8,7 +8,7 @@ function Bun(flavor,glazing,quantity){
 }
 
 Bun.quantity = "1";
-Bun.flavor = "original";
+Bun.flavor = "Original Bun";
 // validate form
 
 
@@ -48,6 +48,7 @@ function order(){
     }
     document.getElementById("cartNum").innerHTML = cart.length;
     document.getElementById("cartNum").style.display = "inline-block";
+    //store to local to transfer between pages
     localStorage.setItem("shoppingCart",JSON.stringify(cart));
     console.log(cart);
 }
@@ -56,7 +57,7 @@ function order(){
 function getCart(){
     //transfer cart items to check out page
     var cart = JSON.parse(localStorage.getItem("shoppingCart"));
-    console.log(cart,cart.length);
+    // console.log(cart,cart.length);
     for (i=0; i<cart.length; i++){
         var flavor = cart[i][0];
         var glazing = cart[i][1];
@@ -64,5 +65,8 @@ function getCart(){
         console.log(glazing);
        
     }
+    //tabulate display
+    document.getElementById("productName").innerHTML = flavor;
     document.getElementById("cartGlazing").innerHTML = glazing;
+    document.getElementById("quantitySelect").value = quantity;
 }
