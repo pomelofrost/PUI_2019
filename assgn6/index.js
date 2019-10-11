@@ -9,9 +9,8 @@ function Bun(flavor,glazing,quantity){
 
 Bun.quantity = "1";
 Bun.flavor = "Original Bun";
-// validate form
 
-
+//Glazing section
 function none(){
     Bun.glazing = "none";
 }
@@ -27,16 +26,17 @@ function chocolate(){
 
 function addGlazing(){
     console.log(Bun.flavor, Bun.glazing, Bun.quantity);
-    //clear border styling
-    document.getElementById("none").style.border="none";
-    document.getElementById("vanilla").style.border="none";
-    document.getElementById("sugar").style.border="none";
-    document.getElementById("chocolate").style.border="none";
-    //add border to the one seleccted
+    //grey out other choices
+    document.getElementById("none").style.opacity="0.6";
+    document.getElementById("vanilla").style.opacity="0.6";
+    document.getElementById("sugar").style.opacity="0.6";
+    document.getElementById("chocolate").style.opacity="0.6";
+    //add border to the one seleccted, and make opaque
     document.getElementById(Bun.glazing).style.border="solid 3px black";
     document.getElementById(Bun.glazing).style.opacity="1";
 }
 
+//when user clicks order
 function order(){
     var quantitySelect = document.getElementById("quantitySelect").value;
     Bun.quantity = quantitySelect;
@@ -53,7 +53,7 @@ function order(){
     console.log(cart);
 }
 
-
+//shopping cart section
 function getCart(){
     //transfer cart items to check out page
     var cart = JSON.parse(localStorage.getItem("shoppingCart"));
