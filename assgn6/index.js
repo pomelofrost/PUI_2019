@@ -44,7 +44,25 @@ function order(){
     if(typeof Bun.glazing !== "undefined"){
         //add to cart
         cart.push([Bun.flavor, Bun.glazing, Bun.quantity]);
+        //store this data
     }
     document.getElementById("cartNum").innerHTML = cart.length;
     document.getElementById("cartNum").style.display = "inline-block";
+    localStorage.setItem("shoppingCart",JSON.stringify(cart));
+    console.log(cart);
+}
+
+
+function getCart(){
+    //transfer cart items to check out page
+    var cart = JSON.parse(localStorage.getItem("shoppingCart"));
+    console.log(cart,cart.length);
+    for (i=0; i<cart.length; i++){
+        var flavor = cart[i][0];
+        var glazing = cart[i][1];
+        var quantity = cart[i][2];
+        console.log(glazing);
+       
+    }
+    document.getElementById("cartGlazing").innerHTML = glazing;
 }
