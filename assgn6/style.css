@@ -288,11 +288,6 @@ span p{
 	font-size:0.8em;
 }
 
-.product span p{
-	font-size:1em;
-	text-align:left;
-	margin-top:0;
-}
 
 input:checked + span {
     display:none;
@@ -365,6 +360,11 @@ select{
 	max-width:100%;
 }
 
+.product span p{
+	font-size:1em;
+	text-align:left;
+	margin-top:0;
+}
 
 .orderSummary{
 	border: 1px solid black;
