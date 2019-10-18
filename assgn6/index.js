@@ -112,7 +112,7 @@ function getCart(){
         option3.setAttribute("value","6");
         option4.innerHTML = "12";
         option4.setAttribute("value","12");
-        quantitySelect.value = quantity;
+
        
         //display delete button
        var deleteButton = document.createElement("button");
@@ -135,6 +135,7 @@ function getCart(){
         quantitySelect.appendChild(option2);
         quantitySelect.appendChild(option3);
         quantitySelect.appendChild(option4);
+        quantitySelect.value = quantity;
         smallDiv.appendChild(deleteButton);
         deleteButton.appendChild(trashIcon);
     }
