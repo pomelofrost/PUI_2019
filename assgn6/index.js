@@ -13,15 +13,20 @@ Bun.flavor = "Original Bun";
 //Glazing section
 function none(){
     Bun.glazing = "none";
+    document.getElementById("productDisplay").src="img/bun.png";
 }
 function vanilla(){
     Bun.glazing = "vanilla";
+    document.getElementById("productDisplay").src="img/original_vanilla.png";
+
 }
 function sugar(){
     Bun.glazing = "sugar";
+    document.getElementById("productDisplay").src="img/original_sugar.png";
 }
 function chocolate(){
     Bun.glazing = "chocolate";
+    document.getElementById("productDisplay").src="img/original_chocolate.png";
 }
 
 function addGlazing(){
@@ -73,9 +78,10 @@ function getCart(){
         var item = document.createElement("div");
         item.setAttribute("class","product");
         item.setAttribute("id","item"+i);
-        //add img
+        //add product image
         var imgNode = document.createElement('img');
-        imgNode.setAttribute("src","img/bun.png");
+        //img source based on glazing
+        imgNode.setAttribute("src","img/original_"+glazing+".png");
         //create secondary div
         var smallDiv = document.createElement('div');
         //display flavor
