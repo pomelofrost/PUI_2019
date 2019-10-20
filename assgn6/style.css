@@ -136,6 +136,11 @@ button{
 	margin-top: 10px;
 }
 
+.orderButton{
+	border: 2px solid black;
+	background-color:#FFF3D8;
+	border-radius: 30px;
+}
 /* homepage */
 .splash{
 	display:block;
@@ -240,10 +245,7 @@ input[type=text] {
 
 .productDescription img{
 	width:40%;
-}
-
-.productDescription img{
-	width:40%;
+	height:40%;
 }
 
 
@@ -257,6 +259,7 @@ p{
 	color:black;
 	font-weight:300;
 	padding-top:1em;
+	line-height:1.5;
 }
 
 .last{
@@ -278,7 +281,7 @@ span{
 	height:50px;
 	border-radius:50%;
 	margin:3px;
-	cursor:pointer;
+	/* cursor:pointer; */
 	border-style:inset;
 }
 
@@ -313,14 +316,14 @@ input:checked + span {
 select{
 	font-size: 16px;
 	font-weight: 700;
-	color: #6f593a;
+	color: black;
 	line-height: 1.3;
 	padding: .6em 1.4em .5em .8em;
 	width: 15%;
 	max-width: 15%;
 	box-sizing: border-box;
 	margin: 0;
-	border: 2px solid #6F593A;
+	border: 2px solid black;
 	border-radius: .5em;
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -331,6 +334,11 @@ select{
 }
 
 /* cart page style */
+.cartPage button{
+	border-style:none;
+	cursor:pointer;
+}
+
 .back{
 	margin-bottom:3em;
 }
@@ -346,31 +354,48 @@ select{
 	grid-column-end:4;
 }
 
+.left h3{
+	font-weight:300;
+}
+
 .product{
 	display:flex;
 	justify-content:flex-start;
+	margin-bottom:2em;
 }
 
+
 .product img{
-	width:40%
+	width:30%;
+	height:30%;
 }
+
 
 .product select{
 	width:100%;
 	max-width:100%;
+	margin-bottom:1em;
+	border:1px solid black;
+	font-weight:300;
+
 }
 
-.product span p{
-	font-size:1em;
+.product p{
+	font-size:1.2em;
 	text-align:left;
 	margin-top:0;
+	padding-top:0;
 }
 
+/* order summary section styling */
 .orderSummary{
-	border: 1px solid black;
-	padding: 2em;
 	grid-column-start:5;
 	grid-column-end:6;
+}
+.orderSummary div{
+	border: 1px solid black;
+	max-height: 300px;
+	padding: 2em;
 }
 
 .orderSummary span{
@@ -378,59 +403,23 @@ select{
 	align-content:space-between;
 }
 
-.orderSummary p{
-	font-size:1em;
+#price span p{
+	font-size:1.2em;
 	font-weight:300;
 	color:black;
+	text-align:center;
+	margin:0;
 }
 
-/* 
-.glutenWrapper{
-	display:flex;
+#price h3{
+	text-align:center;
 }
 
-label{
-	font-size: 1.5em;
-	color:#6F593A;
-	padding: 1em 8em 1em 4em;
+#checkoutButton{
+	margin-top:1em;
 }
 
-.glutenWrapper input {
-	position: absolute;
-	opacity: 0;
-	cursor: pointer;
-	height: 0;
-	width: 0;
-  }
-  
-
-.newCheckbox {
-	top: 0;
-	left: 0;
-	height: 25px;
-	width: 25px;
-	border-radius:4px;
-	border: 2px solid #6F593A;
-	background-color:#FFEFCE;
-  }
-
-  
-.glutenWrapper:hover input ~ .newCheckbox {
-	background-color: rgb(184, 154, 112);
-  }
-  
-  .glutenWrapper input:checked ~ .newCheckbox {
-	background-color: #6f593a;
-  }
-
-.choices{
-	padding-left:4em;
-	padding-right:4em;
-	display:flex;
+#checkoutButton p{
+	text-align:center;
+	padding-top:0;
 }
-
-.choices img{
-	width: 80%;
-	height:auto;
-} */
-
