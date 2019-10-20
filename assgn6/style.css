@@ -281,14 +281,14 @@ span{
 	height:50px;
 	border-radius:50%;
 	margin:3px;
-	/* cursor:pointer; */
 	border-style:inset;
-}
-
-span p{
-	margin-top:3em;
 	text-align:center;
 	font-size:0.8em;
+}
+
+.glazingWrapper span{
+	cursor:pointer;
+
 }
 
 

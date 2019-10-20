@@ -33,14 +33,20 @@
             <img src="img/bun.png" alt="" id="productDisplay">
             <div class="text">
                 <!-- right side -->
-                <span class="price"><h3>$3.5</h3></span>
+                <h3 class="price">$3.5</h3>
                 <p>Glazing:</p>
                 <div class="glazingWrapper" onclick="addGlazing()">
-                    <span id="none" onClick="none()"><p>none</p></span>
-                    <span id="vanilla" onClick="vanilla()"><p>vanilla</p></span>
-                    <span id="sugar" onClick="sugar()"><p>sugar</p></span>
-                    <span id="chocolate" onClick="chocolate()"><p>chocolate</p></span>
+                    <span id="none" onClick="none()"></span>
+                    <span id="vanilla" onClick="vanilla()"></span>
+                    <span id="sugar" onClick="sugar()"></span>
+                    <span id="chocolate" onClick="chocolate()"></span>
                 </div>
+                <div class="glazingWrapper">
+                        <span>none</span>
+                        <span>vanilla</span>
+                        <span>sugar</span>
+                        <span>chocolate</span>
+                    </div>
                 <p class="last"> Quantity:</p>
                 <select name="quantity" id="quantitySelect">
                     <option value="1">1</option>
