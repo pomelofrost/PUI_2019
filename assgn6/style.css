@@ -228,7 +228,7 @@ input[type=text] {
 }
 
 .bunWrapper div{
-	margin:3em;
+	margin:1em;
 }
 
 .bunWrapper h2,.choices h2{
@@ -341,22 +341,23 @@ select{
 }
 
 .back{
-	margin-bottom:3em;
+	margin:3em;
 }
 
 .cartWrapper{
 	margin: 3em;
 	display:grid;
-	grid-template-columns: 20% 20% 20% 20% 20%;
+	grid-template-columns: 5% 30% 25% 20% 20%;
 }
 
 .left{
-	grid-column-start:1;
-	grid-column-end:4;
+	grid-column-start:2;
+	grid-column-end:5;
 }
 
 .left h3{
 	font-weight:300;
+	font-size:2em;
 }
 
 .product{
@@ -418,6 +419,7 @@ select{
 
 #checkoutButton{
 	margin-top:1em;
+	padding:1em;
 }
 
 #checkoutButton p{
