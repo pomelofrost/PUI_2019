@@ -426,3 +426,16 @@ select{
 	text-align:center;
 	padding-top:0;
 }
+
+/* wishlist page */
+.wish{
+	padding:2% 6%;
+}
+.wish h3{
+	margin-bottom:2em;
+}
+.list .product img{
+	padding:1em;
+	width:20%;
+	height:20%;
+}

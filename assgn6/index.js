@@ -1,4 +1,5 @@
 var cart=[];
+var wishList=[];
 
 // bun object
 function Bun(flavor,glazing,quantity){
@@ -147,4 +148,73 @@ function deleteItem(index){
     cart.splice(i-1,1);
     localStorage.setItem("shoppingCart",JSON.stringify(cart));    //repopulate page
     getCart();
+}
+
+function addToWishlist(){
+    //checks if all inputs are finished
+    if(typeof Bun.glazing !== "undefined"){
+        //add to cart
+        wishList.push([Bun.flavor, Bun.glazing]);
+        //store this data
+    }
+    //store to local to transfer between pages
+    localStorage.setItem("wishList",JSON.stringify(wishList));
+    console.log(wishList);
+}
+
+function getWishlist(){
+    //transfer wishlist items to check out page
+    var list = JSON.parse(localStorage.getItem("wishList"));
+    //tabulate display
+    for (i=0; i<list.length; i++){
+        var flavor = list[i][0];
+        var glazing = list[i][1];
+        //add html to each bun//
+        var listWrapper = document.getElementsByClassName("list")[0];
+        //create big div
+        var item = document.createElement("div");
+        item.setAttribute("class","product");
+        item.setAttribute("id","item"+i);
+        //add product image
+        var imgNode = document.createElement('img');
+        //img source based on glazing
+        imgNode.setAttribute("src","img/original_"+glazing+".png");
+        //create secondary div
+        var smallDiv = document.createElement('div');
+        //display flavor
+        var productName = document.createElement('h3');
+        productName.innerHTML = flavor;
+        //add a span to group descriptions
+        var desSpan = document.createElement('span');
+        //display glazing
+        var glazingDes = document.createElement('p');
+        glazingDes.innerHTML = "Glazing:";
+        var cartGlazing = document.createElement('p');
+        cartGlazing.innerHTML = glazing;
+       
+        //display delete button
+       var deleteButton = document.createElement("button");
+       var trashIcon = document.createElement("i");
+       trashIcon.setAttribute("class","far fa-trash-alt");
+       deleteButton.setAttribute("onClick","deleteWishItem(i)");
+
+       //append everything
+        listWrapper.appendChild(item);
+        item.appendChild(imgNode);
+        item.appendChild(smallDiv);
+        smallDiv.appendChild(productName);
+        smallDiv.appendChild(desSpan);
+        desSpan.appendChild(glazingDes);
+        desSpan.appendChild(cartGlazing);
+        smallDiv.appendChild(deleteButton);
+        deleteButton.appendChild(trashIcon);
+    }
+}
+
+function deleteWishItem(index){
+    //remove item from cart
+    var list = JSON.parse(localStorage.getItem("wishList"));
+    list.splice(i-1,1);
+    localStorage.setItem("wishList",JSON.stringify(list));    //repopulate page
+    getWishList();
 }
