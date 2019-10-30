@@ -459,6 +459,8 @@ select{
 .carouselItem{
 	display:none;
 	align-content:center;
+	padding-left:2em;
+	padding-top:1em;
 }
 
 .carouselItem img{
