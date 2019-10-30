@@ -426,6 +426,15 @@ select{
 	text-align:center;
 	padding-top:0;
 }
+/* animation */
+#checkoutButton:hover{
+	transition-property: background-color 0.5s ease 0.3s;
+	background-color: black;
+}
+#checkoutButton:hover > p{
+	color:white;
+	transition-property: background-color 0.5s ease 0.3s;
+}
 
 /* wishlist page */
 .wish{

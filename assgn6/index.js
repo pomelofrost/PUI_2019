@@ -119,7 +119,11 @@ function getCart(){
        var deleteButton = document.createElement("button");
        var trashIcon = document.createElement("i");
        trashIcon.setAttribute("class","far fa-trash-alt");
-       deleteButton.setAttribute("onClick","deleteItem(i)");
+
+       deleteButton.value = i;
+       deleteButton.addEventListener("click",function(){
+           deleteItem(deleteButton.value)
+       });
 
        //append everything
         left.appendChild(item);
@@ -145,7 +149,7 @@ function getCart(){
 function deleteItem(index){
     //remove item from cart
     var cart = JSON.parse(localStorage.getItem("shoppingCart"));
-    cart.splice(i-1,1);
+    cart.splice(index-1,1);
     localStorage.setItem("shoppingCart",JSON.stringify(cart));    //repopulate page
     getCart();
 }
@@ -196,7 +200,11 @@ function getWishlist(){
        var deleteButton = document.createElement("button");
        var trashIcon = document.createElement("i");
        trashIcon.setAttribute("class","far fa-trash-alt");
-       deleteButton.setAttribute("onClick","deleteWishItem(i)");
+       deleteButton.value = i;
+       deleteButton.addEventListener("click",function(){
+           deleteItem(deleteButton.value)
+           console.log(deleteButton.value)
+       });
 
        //append everything
         listWrapper.appendChild(item);
@@ -214,7 +222,7 @@ function getWishlist(){
 function deleteWishItem(index){
     //remove item from cart
     var list = JSON.parse(localStorage.getItem("wishList"));
-    list.splice(i-1,1);
+    list.splice(index-1,1);
     localStorage.setItem("wishList",JSON.stringify(list));    //repopulate page
     getWishList();
 }
