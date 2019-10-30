@@ -157,7 +157,7 @@ function deleteItem(index){
 function addToWishlist(){
     //checks if all inputs are finished
     if(typeof Bun.glazing !== "undefined"){
-        //add to cart
+        //add to wishlist
         wishList.push([Bun.flavor, Bun.glazing]);
         //store this data
     }
@@ -169,6 +169,10 @@ function addToWishlist(){
 function getWishlist(){
     //transfer wishlist items to check out page
     var list = JSON.parse(localStorage.getItem("wishList"));
+    console.log(list)
+    //clear everything first
+    var parentDiv = document.getElementsByClassName("list")[0];
+    parentDiv.innerHTML = "";
     //tabulate display
     for (i=0; i<list.length; i++){
         var flavor = list[i][0];
@@ -197,14 +201,14 @@ function getWishlist(){
         cartGlazing.innerHTML = glazing;
        
         //display delete button
-       var deleteButton = document.createElement("button");
-       var trashIcon = document.createElement("i");
-       trashIcon.setAttribute("class","far fa-trash-alt");
-       deleteButton.value = i;
-       deleteButton.addEventListener("click",function(){
-           deleteItem(deleteButton.value)
-           console.log(deleteButton.value)
-       });
+        var deleteButton = document.createElement("button");
+        var trashIcon = document.createElement("i");
+        trashIcon.setAttribute("class","far fa-trash-alt");
+ 
+        deleteButton.value = i;
+        deleteButton.addEventListener("click",function(){
+            deleteWishItem(deleteButton.value)
+        });
 
        //append everything
         listWrapper.appendChild(item);
@@ -220,9 +224,12 @@ function getWishlist(){
 }
 
 function deleteWishItem(index){
-    //remove item from cart
+    //remove item from wishlist
     var list = JSON.parse(localStorage.getItem("wishList"));
+    console.log(list)
     list.splice(index-1,1);
-    localStorage.setItem("wishList",JSON.stringify(list));    //repopulate page
-    getWishList();
+    localStorage.setItem("wishList",JSON.stringify(list));   
+    //repopulate page
+
+    getWishlist();
 }
