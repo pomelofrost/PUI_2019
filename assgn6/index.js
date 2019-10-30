@@ -233,3 +233,29 @@ function deleteWishItem(index){
 
     getWishlist();
 }
+
+// carousel section
+var itemIndex = 1;
+function displayCarousel(){
+    arrangeCarousel(itemIndex)
+};
+
+function rotate(i){
+    arrangeCarousel(itemIndex += i)
+}
+
+function arrangeCarousel(n){
+var items = document.getElementsByClassName('carouselItem');
+console.log(items)
+// make sure that the carousel loops
+if (n > items.length) {itemIndex = 1}; 
+if (n < 1) {itemIndex = items.length}; 
+// change display styles
+for (var i = 0; i < items.length; i++) {
+    items[i].style.display = "block";  
+}
+//organize the one that is hiding
+items[itemIndex-1].style.display = "none";  
+
+
+}

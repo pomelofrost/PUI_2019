@@ -10,7 +10,7 @@
     <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/1130118603.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="displayCarousel()">
     <header>
         <nav>
             <!-- navigation -->
@@ -59,6 +59,28 @@
                 <button id="wishlist" onClick="addToWishlist()">add to wishlist</button>
                 <p>Our bun is your bun. This original fan favorite is filled with gooey buttery goodness and delivered straight to your mouth in a hearty, cinnamon taste.</p>
                 <p class="last">Ingredients: Flouer, eggs, condensed milk, cinnamon, sugar</p>
+                <h3>People also like</h3>
+                <div class="carousel">
+                    <div class="carouselItem">
+                        <img src="img/blackberry.png" alt="">
+                        <p>Blackberry Bun</p>
+                    </div>
+                    <div class="carouselItem">
+                            <img src="img/walnut.png" alt="">
+                            <p>Walnut Bun</p>
+                    </div>
+                    <div class="carouselItem">
+                            <img src="img/pumpkinSpice.png" alt="">
+                            <p>Pumpkin Bun</p>
+                    </div>
+                    <div class="carouselItem">
+                            <img src="img/originalG.png" alt="">
+                            <p>Original Gluten-Free Bun</p>
+                    </div>
+                    <!-- controls -->
+                    <a class="prev" onclick="rotate(-1)">&#10094;</a>
+                    <a class="next" onclick="rotate(1)">&#10095;</a>
+                </div>
             </div>
         </div>
     </main>
