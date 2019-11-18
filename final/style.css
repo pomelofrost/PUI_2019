@@ -168,6 +168,15 @@ nav h3{
 .assets img{
     width:50%;
 }
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked .asset{
+    border:1px solid;
+}
+
 /* legacy contact */
 .legacyCard{
     width:33vw;
@@ -208,4 +217,17 @@ nav a{
 .selectedAsset img{
     width:30%;
     margin-right:10%
+}
+
+.actions{
+    border-radius:1em;
+    border:none;
+    background:white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    padding:1em 3em;
+
+}
+
+label{
+    text-align:center;
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
+    <script src="select.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -15,46 +15,68 @@
     </nav>
     <main>
         <h2>Select social media platforms to start planning</h2>
-    <div class="assets">
-        <input type="checkbox" value="Facebook">
-            <div>
-                    <img src="img/fb.png" alt="">
-                    <h3>Facebook</h3>
-            </div>
-        <input type="checkbox" value="Instagram">
-            <div>
-                    <img src="img/ins.png" alt="">
-                    <h3>Instagram</h3>
-            </div>
-        </input>
-        <input type="checkbox">
-        <div>
+    <form class="assets">
+        <div class="asset">
+            <label for="Facebook" onclick="addBorder()">
+                <img src="img/fb.png" alt="">
+                <h3>Facebook</h3>
+                <input type="checkbox" id="Facebook">
+            </label>
+        </div>
+
+        <div class="asset">
+            <label for="Instagram">
+                <img src="img/ins.png" alt="">
+                <h3>Instagram</h3>
+                <input type="checkbox" id="Instagram">
+            </label>
+        </div>
+        <div class="asset">
+            <label for="LinkedIn">
             <img src="img/linkedin.png" alt="">
             <h3>LinkedIn</h3>
+            <input type="checkbox" id="LinkedIn">
+            </label>
         </div>
-        <div>
-            <img src="img/messenger.png" alt="">
-            <h3>Messenger</h3>
+        <div class="asset">
+            <label for="Messenger">
+                <img src="img/messenger.png" alt="">
+                <h3>Messenger</h3>
+                <input type="checkbox" id="Messenger">
+            </label>
         </div>
-        <div>
-            <img src="img/snap.png" alt="">
-            <h3>Snapchat</h3>
+        <div class="asset">
+            <label for="Snapchat">
+                <img src="img/snap.png" alt="">
+                <h3>Snapchat</h3>
+                <input type="checkbox" id="Snapchat">
+            </label>
         </div>
-        <div>
-            <img src="img/twitter.png" alt="">
-            <h3>Twitter</h3> 
+        <div class="asset">
+            <label for="Twitter">
+                <img src="img/twitter.png" alt="">
+                <h3>Twitter</h3> 
+                <input type="checkbox" id="Twitter">
+            </label>
         </div>
-        <div>
-            <img src="img/YouTube.png" alt="">
-            <h3>YouTube</h3>
+        <div class="asset">
+            <label for="YouTube">
+                <img src="img/YouTube.png" alt="">
+                <h3>YouTube</h3>
+                <input type="checkbox" id="YouTube">
+            </label>
         </div>
-        <div>
-            <img src="img/whatsapp.png" alt="">
-            <h3>What'sApp</h3>
+        <div class="asset">
+            <label for="WhatsApp">
+                <img src="img/whatsapp.png" alt="">
+                <h3>What'sApp</h3>
+                <input type="checkbox" id="WhatsApp">
+            </label>
         </div>
-    </div>
-        <a href="legacycontact.html" class="button_inactive">Next</a>
+    </form>
+        <div onclick="validate()"><a href="" class="button_inactive">Next</a></div>
     </main>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
