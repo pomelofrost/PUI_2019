@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
+    <script src="select.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -14,16 +14,16 @@
         <h3>Digiwise</h3>
     </nav>
     <main>
-        <form>
+        <div id="legacyContainer" class='row'>
             <div class="card legacyCard"> 
             <div class="form-group">
                 <label for="name">Name</label>
                 <div class="row">
                     <div class="col">
-                    <input type="text" class="form-control" placeholder="First name">
+                    <input type="text" class="form-control" placeholder="First name" id="first">
                     </div>
                     <div class="col">
-                    <input type="text" class="form-control" placeholder="Last name">
+                    <input type="text" class="form-control" placeholder="Last name" id="last">
                     </div>
                 </div>
             </div>
@@ -39,16 +39,16 @@
                 <div class="form-group">
                         <label for="relationship">Relationship</label>
                         <select class="form-control" id="relationship">
-                          <option>Family</option>
-                          <option>Friend</option>
-                          <option>Colleague</option>
-                          <option>Others</option>
+                          <option value="family">Family</option>
+                          <option value="friend">Friend</option>
+                          <option value="colleague">Colleague</option>
+                          <option value="others">Others</option>
                         </select>
                       </div>
-                <button type="submit" class="btn btn-primary">Done</button>
+                <button type="submit" class="btn btn-primary" onClick="collectInfo()">Done</button>
                 </div>
             </div>
-        </form>
+        </div>
         <a href="dashboard.html" class="button_inactive">Next</a>
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
