@@ -82,7 +82,7 @@ h2{
 
 h3{
     font-family: neue-haas-grotesk-text, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-style: normal;
     font-size:1.5em;
     line-height:1.5;
@@ -106,13 +106,30 @@ label{
 }
 a{
     font-family: neue-haas-grotesk-display,sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     font-size:1.2vw;
     line-height:1.5;
     color:white;
     text-decoration:none;
 }
+
+a:link {
+    text-decoration: none;
+  }
+  
+a:visited {
+    text-decoration: none;
+  }
+  
+a:hover {
+    text-decoration: none;
+    color:white;
+  }
+  
+a:active {
+    text-decoration: none;
+  }
 
 nav h3{
     text-align:left;
@@ -125,6 +142,11 @@ nav h3{
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 24px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+.button_active:hover{
+    box-shadow:none;
 }
 
 .button_inactive{
@@ -138,7 +160,7 @@ nav h3{
 }
 /* splash */
 
-#splashImg{
+.splashImg{
     width: 100%;
     height:auto;
     padding-top: 100px;
@@ -148,6 +170,43 @@ nav h3{
     margin:0;
     padding:0;
 }
+
+.marquee{
+    overflow: hidden;
+    white-space: nowrap;
+}
+#marquee1 {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+  }
+  
+#marquee2 {
+    display: inline-block;
+    animation: marquee2 20s linear infinite;
+    animation-delay: 10s;
+  }
+
+  .fullbleed h1{
+    margin:10vh 20vw;
+}
+
+@keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+@keyframes marquee2 {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-200%);
+    }
+  }
 
 /* select */
 .assets{
