@@ -216,15 +216,20 @@ nav h3{
     
 }
 
-.assets div{
+.asset{
     margin:1vw;
     padding:2.5vw 0;
     background-color:white;
     border-radius:20px;
+    cursor:pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
-.assets img{
+.asset:hover{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.08);
+
+}
+.asset img{
     width:50%;
 }
 
@@ -233,13 +238,15 @@ input[type="checkbox"] {
 }
 
 .selected{
-    outline:3px #4A90E2 solid;
-    outline-offset:3px;
+    box-shadow:0px 0px 0px 3px #4A90E2 inset;
 }
 
-label:hover .asset{
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.08);
+label{
+    cursor:pointer;
+}
 
+form{
+    margin-bottom:5vh;
 }
 /* legacy contact */
 .legacyCard{
@@ -249,6 +256,20 @@ label:hover .asset{
     border:none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
     text-align:left;
+}
+
+::placeholder, select, .btn{
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size:1vw;
+    line-height:1.5;
+    text-align:left;
+}
+
+.btn{
+    font-weight: 400;
+    text-align:center;
 }
 
 /* dashboard */
