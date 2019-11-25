@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="select.js"></script>
-    <title>Facebook</title>
+    <title>Plan Facebook</title>
 </head>
 <body onLoad="getContacts()">
     <main class="row fullbleed">
@@ -59,7 +59,7 @@
             </div>
         </nav>
         <div class="col-md-9">
-            <a href="dashboard.html">Back</a>
+            <a href="dashboard.html" class="backBtn">Back</a>
             <div id="actions">
                 <h2>Actions</h2>
                     <input class="form-check-input" type="radio" name="actions" id="memorialize" value="memorialize">
@@ -79,8 +79,8 @@
                 </div>
                 
             </div>
-            <button onclick="checkForm()" class="button_active" id="submitBtn">Submit</button>
-                <button onclick="editForm()" class="button_active hidden" id="editBtn">Edit</button>
+            <button onclick="checkForm(this)" class="button_active facebook" id="submitBtn">Submit</button>
+            <button onclick="editForm()" class="button_active hidden" id="editBtn">Edit</button>
         </div>
         </main> 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

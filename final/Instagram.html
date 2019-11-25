@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="select.js"></script>
-    <title>Document</title>
+    <title>Plan Instagram</title>
 </head>
-<body onLoad="parseResult()">
-        <!-- side nav some inspired by https://getbootstrap.com/docs/4.1/examples/dashboard/# -->
+<body onLoad="getContacts()">
     <main class="row fullbleed">
         <nav class="col-md-3 d-none d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
@@ -59,10 +58,37 @@
                 </ul>
             </div>
         </nav>
-        <div id="result" class="col-md-9">
-            <h3>Digital Will</h3>
-            
-        </div>
-    </main>
+        <div class="col-md-9">
+            <a href="dashboard.html" class="backBtn">Back</a>
+            <div id="actions">
+                <h2>Actions</h2>
+                    <input class="form-check-input" type="radio" name="actions" id="archive" value="archive">
+                    <label class="form-check-label" for="archive">
+                    <h3>Download data and Delete Account</h3>
+                    <p>If you want a copy of everything you've shared on Instagram, you can request a download of your data in a machine readable (JSON) format. You'll need your Instagram account password to request this information.</p></label>
+                    <input class="form-check-input" type="radio" name="actions" id="delete" value="delete">
+                    <label class="form-check-label" for="delete">
+                    <h3>Delete account</h3>
+                    <p>When you delete your account, your profile, photos, videos, comments, likes and followers will be permanently removed.</p>
+                    </label>
+                    <input class="form-check-input" type="radio" name="actions" id="transfer" value="transfer">
+                    <label class="form-check-label" for="transfer">
+                        <h3>Transfer Ownership</h3>
+                        <p>Pass on your account ownership to someone else.</p>
+                        </label>
+                <h2>Legacy Contact</h2>
+                <div id="contacts">
 
+                </div>
+                
+            </div>
+            <button onclick="checkForm(this)" class="button_active instagram" id="submitBtn">Submit</button>
+            <button onclick="editForm()" class="button_active hidden" id="editBtn">Edit</button>
+        </div>
+        </main> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
 </body>
+</html>

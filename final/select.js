@@ -1,8 +1,23 @@
 var selectedAssets = [];
 var legacyContacts = [];
 var contactName = [];
+
 var facebookPlan = [];
 var facebookContact = [];
+var youtubePlan=[];
+var youtubeContact = [];
+var linkedinPlan=[];
+var linkedinContact =[];
+var instagramPlan=[];
+var instagramContact =[];
+var messengerPlan=[];
+var messengerContact =[];
+var whatsappPlan=[];
+var whatsappContact =[];
+var snapchatPlan=[];
+var snapchatContact =[];
+var twitterPlan=[];
+var twitterContact=[];
 
 function validate(){
     console.log("hi");
@@ -208,7 +223,7 @@ function getContacts(){
     }
 }
 
-function checkForm(){
+function checkForm(asset){
     // check if all inputs are filled
     var actions = document.getElementsByName("actions");
     var contacts = document.getElementsByName("selectContact")
@@ -216,7 +231,14 @@ function checkForm(){
           if (actions[i].checked) {
               for (var j = 0, len = contacts.length; j < len; j++){
                   if (contacts[j].checked){
-                    setPlan();
+                    if (asset.classList.contains("facebook")){setFacebookPlan()}
+                    if (asset.classList.contains("youtube")){setYouTubePlan()}
+                    if (asset.classList.contains("linkedin")){setLinkedInPlan()}
+                    if (asset.classList.contains("messenger")){setMessengerPlan()}
+                    if (asset.classList.contains("instagram")){setInstagramPlan()}
+                    if (asset.classList.contains("twitter")){setTwitterPlan()}
+                    if (asset.classList.contains("snapchat")){setSnapchatPlan()}
+                    if (asset.classList.contains("whatsapp")){setWhatsAppPlan()}
                   }
               }
           }
@@ -224,9 +246,9 @@ function checkForm(){
     }
 
 
-function setPlan(){
-    console.log("in setPlan() function now...")
-    
+function setFacebookPlan(){
+    console.log("in facebook plan")
+
     var actions = document.getElementsByName("actions");
     for (i=0;i<actions.length;i++){
         if(actions[i].checked){
@@ -243,7 +265,166 @@ function setPlan(){
     }
     localStorage.setItem("facebookPlan",JSON.stringify(facebookPlan));
     localStorage.setItem("facebookContact",JSON.stringify(facebookContact));
+    lockForm();
+}
 
+
+function setYouTubePlan(){
+    console.log("in youtube plan")
+    var actions = document.getElementsByName("actions");
+    for (i=0;i<actions.length;i++){
+        if(actions[i].checked){
+            youtubePlan.push(actions[i].value);
+            
+        }
+        
+    }
+    var contacts = document.getElementsByName("selectContact");
+    for (i=0;i<contacts.length;i++){
+        if(contacts[i].checked){
+            youtubeContact.push(contacts[i].value);
+        }
+    }
+    localStorage.setItem("youtubePlan",JSON.stringify(youtubePlan));
+    localStorage.setItem("youtubeContact",JSON.stringify(youtubeContact));
+    lockForm();
+}
+
+function setLinkedInPlan(){
+    console.log("in linkedin plan")
+    var actions = document.getElementsByName("actions");
+    for (i=0;i<actions.length;i++){
+        if(actions[i].checked){
+            linkedinPlan.push(actions[i].value);
+            
+        }
+        
+    }
+    var contacts = document.getElementsByName("selectContact");
+    for (i=0;i<contacts.length;i++){
+        if(contacts[i].checked){
+            linkedinContact.push(contacts[i].value);
+        }
+    }
+    localStorage.setItem("linkedinPlan",JSON.stringify(linkedinPlan));
+    localStorage.setItem("linkedinContact",JSON.stringify(linkedinContact));
+    lockForm();
+}
+
+function setMessengerPlan(){
+    console.log("in messenger plan")
+    var actions = document.getElementsByName("actions");
+    for (i=0;i<actions.length;i++){
+        if(actions[i].checked){
+            messengerPlan.push(actions[i].value);
+            
+        }
+        
+    }
+    var contacts = document.getElementsByName("selectContact");
+    for (i=0;i<contacts.length;i++){
+        if(contacts[i].checked){
+            messengerContact.push(contacts[i].value);
+        }
+    }
+    localStorage.setItem("messengerPlan",JSON.stringify(messengerPlan));
+    localStorage.setItem("messengerContact",JSON.stringify(messengerContact));
+    lockForm();
+}
+    
+
+function setInstagramPlan(){
+    console.log("in instagram plan")
+
+    var actions = document.getElementsByName("actions");
+    for (i=0;i<actions.length;i++){
+        if(actions[i].checked){
+            instagramPlan.push(actions[i].value);
+            
+        }
+        
+    }
+    var contacts = document.getElementsByName("selectContact");
+    for (i=0;i<contacts.length;i++){
+        if(contacts[i].checked){
+            instagramContact.push(contacts[i].value);
+        }
+    }
+    localStorage.setItem("instagramPlan",JSON.stringify(instagramPlan));
+    localStorage.setItem("instagramContact",JSON.stringify(instagramContact));
+    lockForm();
+}
+
+function setSnapchatPlan(){
+    console.log("in snap plan")
+
+    var actions = document.getElementsByName("actions");
+    for (i=0;i<actions.length;i++){
+        if(actions[i].checked){
+            snapchatPlan.push(actions[i].value);
+            
+        }
+        
+    }
+    var contacts = document.getElementsByName("selectContact");
+    for (i=0;i<contacts.length;i++){
+        if(contacts[i].checked){
+            snapchatContact.push(contacts[i].value);
+        }
+    }
+    localStorage.setItem("snapchatPlan",JSON.stringify(snapchatPlan));
+    localStorage.setItem("snapchatContact",JSON.stringify(snapchatContact));
+    lockForm();
+}
+
+function setTwitterPlan(){
+    console.log("in twitter plan")
+
+    var actions = document.getElementsByName("actions");
+    for (i=0;i<actions.length;i++){
+        if(actions[i].checked){
+            twitterPlan.push(actions[i].value);
+            
+        }
+        
+    }
+    var contacts = document.getElementsByName("selectContact");
+    for (i=0;i<contacts.length;i++){
+        if(contacts[i].checked){
+            twitterContact.push(contacts[i].value);
+        }
+    }
+    localStorage.setItem("twitterPlan",JSON.stringify(twitterPlan));
+    localStorage.setItem("twitterContact",JSON.stringify(twitterContact));
+    lockForm();
+}
+
+function setWhatsAppPlan(){
+    console.log("in whatsapp plan")
+
+    var actions = document.getElementsByName("actions");
+    for (i=0;i<actions.length;i++){
+        if(actions[i].checked){
+            whatsappPlan.push(actions[i].value);
+            
+        }
+        
+    }
+    var contacts = document.getElementsByName("selectContact");
+    for (i=0;i<contacts.length;i++){
+        if(contacts[i].checked){
+            whatsappContact.push(contacts[i].value);
+        }
+    }
+    localStorage.setItem("whatsappPlan",JSON.stringify(whatsappPlan));
+    localStorage.setItem("whatsappContact",JSON.stringify(whatsappContact));
+    lockForm();
+}
+
+
+
+
+function lockForm(){
     //change submit button to edit button
     var submit = document.getElementById("submitBtn");
     submit.classList.add("hidden");
@@ -251,15 +432,17 @@ function setPlan(){
     edit.classList.remove("hidden");
     
     //disable form
+    var actions = document.getElementsByName("actions");
     for (i=0;i<actions.length;i++){
         actions[i].disabled = true;
         
     }
     var contacts = document.getElementsByName("selectContact");
     for (i=0;i<contacts.length;i++){
-        actions[i].disabled = true;
+        contacts[i].disabled = true;
     }
 }
+
 
 function editForm(){
     var submit = document.getElementById("submitBtn");
@@ -299,15 +482,155 @@ function parseResult(){
                 facebookPlanDom.innerHTML = "Memorialize Account, pass on to " + facebookContact[0];
             } else{                
                 facebookPlanDom.innerHTML = "Delete Account"
-        }    
+        }
         parentDiv.appendChild(facebookPlanDom);
+    }
+        if(assets[i] == "YouTube"){
+            var youtubeAsset = document.createElement("h4");
+            youtubeAsset.innerHTML="YouTube";
+            parentDiv.appendChild(youtubeAsset);
+            var youtubePlan = JSON.parse(localStorage.getItem("youtubePlan"));
+            var youtubeContact = JSON.parse(localStorage.getItem("youtubeContact"));
+            
+            var youtubePlanDom = document.createElement("p");
 
+            if (youtubePlan[0] =="delete"){
+                youtubePlanDom.innerHTML = "Delete Channel"
+            } if(youtubePlan[0] == "hide"){
+                youtubePlanDom.innerHTML = "Hide Channel"
+            }
+            else{                
+                youtubePlanDom.innerHTML = "Leave as it is"
+        }
+        
+        parentDiv.appendChild(youtubePlanDom);
+        }
 
+        if(assets[i] == "LinkedIn"){
+            var linkedinAsset = document.createElement("h4");
+            linkedinAsset.innerHTML="LinkedIn";
+            parentDiv.appendChild(linkedinAsset);
+            var linkedinPlan = JSON.parse(localStorage.getItem("linkedinPlan"));
+            var linkedinContact = JSON.parse(localStorage.getItem("linkedinContact"));
+            
+            var linkedinPlanDom = document.createElement("p");
+
+            if (linkedinPlan[0] =="delete"){
+                linkedinPlanDom.innerHTML = "Delete Channel"
+            } if(linkedinPlan[0] == "hide"){
+                linkedinPlanDom.innerHTML = "Hide Channel"
+            }
+            else{                
+                linkedinPlanDom.innerHTML = "Leave as it is"
+        }
+        
+        parentDiv.appendChild(linkedinPlanDom);
+        }
+
+        if(assets[i] == "Twitter"){
+            var twitterAsset = document.createElement("h4");
+            twitterAsset.innerHTML="Twitter";
+            parentDiv.appendChild(twitterAsset);
+            var twitterPlan = JSON.parse(localStorage.getItem("twitterPlan"));
+            var twitterContact = JSON.parse(localStorage.getItem("twitterContact"));
+            
+            var twitterPlanDom = document.createElement("p");
+
+            if (twitterPlan[0] =="delete"){
+                twitterPlanDom.innerHTML = "Delete Channel"
+            } if(twitterPlan[0] == "hide"){
+                twitterPlanDom.innerHTML = "Hide Channel"
+            }
+            else{                
+                twitterPlanDom.innerHTML = "Leave as it is"
+        }
+        
+        parentDiv.appendChild(twitterPlanDom);
+        }
+
+        if(assets[i] == "Instagram"){
+            var instagramAsset = document.createElement("h4");
+            instagramAsset.innerHTML="Instagram";
+            parentDiv.appendChild(instagramAsset);
+            var instagramPlan = JSON.parse(localStorage.getItem("instagramPlan"));
+            var instagramContact = JSON.parse(localStorage.getItem("instagramContact"));
+            
+            var instagramPlanDom = document.createElement("p");
+
+            if (instagramPlan[0] =="archive"){
+                instagramPlanDom.innerHTML = "Download data and delete account, pass data to" + instagramContavt[0]
+            } if(instagramPlan[0] == "delete"){
+                instagramPlanDom.innerHTML = "Delete account"
+            }
+            else{                
+                instagramPlanDom.innerHTML = "Transfer ownership to" + instagramContact[0]
+        }
+        
+        parentDiv.appendChild(instagramPlanDom);
+        }
+
+        if(assets[i] == "Snapchat"){
+            var snapchatAsset = document.createElement("h4");
+            snapchatAsset.innerHTML="Snapchat";
+            parentDiv.appendChild(snapchatAsset);
+            var snapchatPlan = JSON.parse(localStorage.getItem("snapchatPlan"));
+            var snapchatContact = JSON.parse(localStorage.getItem("snapchatContact"));
+            
+            var snapchatPlanDom = document.createElement("p");
+
+            if (snapchatPlan[0] =="delete"){
+                snapchatPlanDom.innerHTML = "Delete Channel"
+            } if(snapchatPlan[0] == "hide"){
+                snapchatPlanDom.innerHTML = "Hide Channel"
+            }
+            else{                
+                snapchatPlanDom.innerHTML = "Leave as it is"
+        }
+        
+        parentDiv.appendChild(snapchatPlanDom);
+        }
+
+        if(assets[i] == "Messenger"){
+            var messengerAsset = document.createElement("h4");
+            messengerAsset.innerHTML="Messenger";
+            parentDiv.appendChild(messengerAsset);
+            var messengerPlan = JSON.parse(localStorage.getItem("messengerPlan"));
+            var messengerContact = JSON.parse(localStorage.getItem("messengerContact"));
+            
+            var messengerPlanDom = document.createElement("p");
+
+            if (messengerPlan[0] =="delete"){
+                messengerPlanDom.innerHTML = "Delete Channel"
+            } if(messengerPlan[0] == "hide"){
+                messengerPlanDom.innerHTML = "Hide Channel"
+            }
+            else{                
+                messengerPlanDom.innerHTML = "Leave as it is"
+        }
+        
+        parentDiv.appendChild(messengerPlanDom);
+        }
+
+        if(assets[i] == "WhatsApp"){
+            var whatsappAsset = document.createElement("h4");
+            whatsappAsset.innerHTML="WhatsApp";
+            parentDiv.appendChild(whatsappAsset);
+            var whatsappPlan = JSON.parse(localStorage.getItem("whatsappPlan"));
+            var whatsappContact = JSON.parse(localStorage.getItem("whatsappContact"));
+            
+            var whatsappPlanDom = document.createElement("p");
+
+            if (whatsappPlan[0] =="delete"){
+                whatsappPlanDom.innerHTML = "Delete Channel"
+            } if(whatsappPlan[0] == "hide"){
+                whatsappPlanDom.innerHTML = "Hide Channel"
+            }
+            else{                
+                whatsappPlanDom.innerHTML = "Leave as it is"
+        }
+        
+        parentDiv.appendChild(whatsappPlanDom);
         }
     }
-
-
-
-
 
 }

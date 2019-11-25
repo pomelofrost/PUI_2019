@@ -88,6 +88,14 @@ h3{
     line-height:1.5;
 }
 
+h4{
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size:1.2em;
+    line-height:1.5;
+}
+
 p,form{
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 300;
@@ -100,7 +108,7 @@ label{
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size:1vw;
+    font-size:1em;
     line-height:1.5;
     text-align:left;
 }
@@ -108,7 +116,7 @@ a, button{
     font-family: neue-haas-grotesk-display,sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size:1.2vw;
+    font-size:1.2em;
     line-height:1.5;
     color:white;
     text-decoration:none;
@@ -344,4 +352,24 @@ label{
 
 .hidden{
     display:none;
+}
+
+.backBtn{
+    color:black;
+    text-align:left;
+    margin:3em 2em;
+}
+
+.backBtn:hover{
+    color:#4a90e2
+}
+
+
+/* result */
+#result{
+    padding:5em;
+}
+
+#result p, #result h4{
+    text-align:left;
 }
