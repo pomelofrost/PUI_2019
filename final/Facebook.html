@@ -60,19 +60,15 @@
         </nav>
         <div class="col-md-9">
             <a href="dashboard.html">Back</a>
-            <div class="actions">
+            <div id="actions">
                 <h2>Actions</h2>
-                <div>
                     <input class="form-check-input" type="radio" name="actions" id="memorialize" value="memorialize">
                     <label class="form-check-label" for="memorialize">
                     <h3>Memorialize account</h3>
                     <p>Memorialized accounts are a place for friends and family to gather and share memories after a person has passed away.</p></label>
-                </div>
-                <div>
                     <input class="form-check-input" type="radio" name="actions" id="delete" value="delete">
                     <label class="form-check-label" for="delete">
                     <h3>Permanently delete account</h3></label>
-            </div>
                 <h2>Legacy Contact</h2>
                 <div id="contacts">
                     <!-- <input class="form-check-input" type="radio" name="selectContact" id="sherrywu" value="sherrywu">
@@ -81,9 +77,10 @@
                 </label> -->
 
                 </div>
-                <button onclick="checkForm()">Submit</button>
-
+                
             </div>
+            <button onclick="checkForm()" class="button_active" id="submitBtn">Submit</button>
+                <button onclick="editForm()" class="button_active hidden" id="editBtn">Edit</button>
         </div>
         </main> 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

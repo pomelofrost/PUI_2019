@@ -163,6 +163,8 @@ function parseList(){
         var name = assets[i];
 
         var parentDiv = document.getElementById("assetDiv");
+        var smallDiv = document.createElement("div");
+        smallDiv.setAttribute("class","card asset")
         var link = document.createElement("a");
         link.setAttribute("href",name+".html")
         var asset = document.createElement("div");
@@ -174,7 +176,8 @@ function parseList(){
         assetName.innerHTML = name;
 
         // append
-        parentDiv.appendChild(link);
+        parentDiv.appendChild(smallDiv);
+        smallDiv.appendChild(link)
         link.appendChild(asset);
         asset.appendChild(imgNode);
         asset.appendChild(assetName);
@@ -228,8 +231,9 @@ function setPlan(){
     for (i=0;i<actions.length;i++){
         if(actions[i].checked){
             facebookPlan.push(actions[i].value);
-            console.log(facebookPlan)
+            
         }
+        
     }
     var contacts = document.getElementsByName("selectContact");
     for (i=0;i<contacts.length;i++){
@@ -240,7 +244,38 @@ function setPlan(){
     localStorage.setItem("facebookPlan",JSON.stringify(facebookPlan));
     localStorage.setItem("facebookContact",JSON.stringify(facebookContact));
 
-    //change submit button to edit button (lock content)
+    //change submit button to edit button
+    var submit = document.getElementById("submitBtn");
+    submit.classList.add("hidden");
+    var edit = document.getElementById("editBtn");
+    edit.classList.remove("hidden");
+    
+    //disable form
+    for (i=0;i<actions.length;i++){
+        actions[i].disabled = true;
+        
+    }
+    var contacts = document.getElementsByName("selectContact");
+    for (i=0;i<contacts.length;i++){
+        actions[i].disabled = true;
+    }
+}
+
+function editForm(){
+    var submit = document.getElementById("submitBtn");
+    submit.classList.remove("hidden");
+    var edit = document.getElementById("editBtn");
+    edit.classList.add("hidden");
+
+    var actions = document.getElementsByName("actions");
+    for (i=0;i<actions.length;i++){
+        actions[i].disabled = false;
+        
+    }
+    var contacts = document.getElementsByName("selectContact");
+    for (i=0;i<contacts.length;i++){
+        contacts[i].disabled = false;
+    }
 
 }
 

@@ -104,7 +104,7 @@ label{
     line-height:1.5;
     text-align:left;
 }
-a{
+a, button{
     font-family: neue-haas-grotesk-display,sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -134,12 +134,14 @@ a:active {
 nav h3{
     text-align:left;
 }
+
 .button_active{
     background-color:#4A90E2;
+    color:white;
     padding: 16px 60px;
     text-align: center;
     text-decoration: none;
-    margin: 4px 2px;
+    margin: 20px 2px;
     cursor: pointer;
     border-radius: 24px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
@@ -302,7 +304,8 @@ nav a{
     margin-right:10%
 }
 
-.actions, .legacy{
+/* individual asset pages */
+#actions{
     border-radius:1em;
     border:none;
     background:white;
@@ -311,6 +314,34 @@ nav a{
 
 }
 
+#actions label{
+    margin: 3vh 20vw;
+    border: 1px black solid;
+    border-radius:20px;
+    padding:20px;
+    width: 30vw;
+}
+
+input[type="radio"]{
+    visibility:hidden;
+}
+
+input[type="radio"]:checked+ label{
+    background:#4A90E2;
+    color:white;
+    border: 1px white solid;
+}
+
 label{
     text-align:center;
+}
+
+.asset a{
+    padding-top:10px;
+    color:black;
+    font-size: 15px;
+}
+
+.hidden{
+    display:none;
 }
