@@ -147,6 +147,7 @@ nav h3{
     background-color:#4A90E2;
     color:white;
     padding: 16px 60px;
+    margin-top:50px;
     text-align: center;
     text-decoration: none;
     margin: 20px 2px;
@@ -259,6 +260,13 @@ form{
     margin-bottom:5vh;
 }
 /* legacy contact */
+#legacyContainer{
+    flex-wrap:nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 30px 0;
+}
 .legacyCard{
     width:33vw;
     padding: 6vw;

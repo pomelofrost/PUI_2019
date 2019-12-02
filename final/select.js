@@ -43,6 +43,9 @@ function Contact(first,last,email,tel,relationship){
 }
 
 function collectInfo(){
+    var forms = document.getElementsByClassName("legacyCard");
+    console.log(forms);
+
     // add information in to storage
     var firstName = document.getElementById("first").value;
     var lastName = document.getElementById("last").value;
@@ -53,8 +56,10 @@ function collectInfo(){
     var info = [firstName, lastName, email, tel, relationship];
     legacyContacts.push(info);
     contactName.push(name);
+    console.log(contactName)
     localStorage.setItem("contactName",JSON.stringify(contactName));
     localStorage.setItem("legacyContacts",JSON.stringify(legacyContacts));
+    
     // display another form
     var parentDiv = document.getElementById("legacyContainer");
     var card = document.createElement("div")
@@ -155,6 +160,7 @@ function collectInfo(){
     relationSelect.appendChild(option2);
     relationSelect.appendChild(option3);
     relationSelect.appendChild(option4);
+    
 }
 
 function toggleBorder(element){
@@ -515,10 +521,10 @@ function parseResult(){
             
             var linkedinPlanDom = document.createElement("p");
 
-            if (linkedinPlan[0] =="delete"){
-                linkedinPlanDom.innerHTML = "Delete Channel"
-            } if(linkedinPlan[0] == "hide"){
-                linkedinPlanDom.innerHTML = "Hide Channel"
+            if (linkedinPlan[0] =="close"){
+                linkedinPlanDom.innerHTML = "Close account"
+            } if(linkedinPlan[0] == "cancel"){
+                linkedinPlanDom.innerHTML = "Cancel Subscription"
             }
             else{                
                 linkedinPlanDom.innerHTML = "Leave as it is"
@@ -536,11 +542,9 @@ function parseResult(){
             
             var twitterPlanDom = document.createElement("p");
 
-            if (twitterPlan[0] =="delete"){
-                twitterPlanDom.innerHTML = "Delete Channel"
-            } if(twitterPlan[0] == "hide"){
-                twitterPlanDom.innerHTML = "Hide Channel"
-            }
+            if (twitterPlan[0] =="deactivate"){
+                twitterPlanDom.innerHTML = "Deactivate account"
+            } 
             else{                
                 twitterPlanDom.innerHTML = "Leave as it is"
         }
@@ -558,12 +562,12 @@ function parseResult(){
             var instagramPlanDom = document.createElement("p");
 
             if (instagramPlan[0] =="archive"){
-                instagramPlanDom.innerHTML = "Download data and delete account, pass data to" + instagramContavt[0]
+                instagramPlanDom.innerHTML = "Download data and delete account, pass data to" + instagramContact[0]
             } if(instagramPlan[0] == "delete"){
                 instagramPlanDom.innerHTML = "Delete account"
             }
             else{                
-                instagramPlanDom.innerHTML = "Transfer ownership to" + instagramContact[0]
+                instagramPlanDom.innerHTML = "Transfer ownership to " + instagramContact[0]
         }
         
         parentDiv.appendChild(instagramPlanDom);
@@ -579,9 +583,9 @@ function parseResult(){
             var snapchatPlanDom = document.createElement("p");
 
             if (snapchatPlan[0] =="delete"){
-                snapchatPlanDom.innerHTML = "Delete Channel"
-            } if(snapchatPlan[0] == "hide"){
-                snapchatPlanDom.innerHTML = "Hide Channel"
+                snapchatPlanDom.innerHTML = "Delete Account"
+            } if(snapchatPlan[0] == "download"){
+                snapchatPlanDom.innerHTML = "Download data, pass data to "+ snapchatContact[0]
             }
             else{                
                 snapchatPlanDom.innerHTML = "Leave as it is"
