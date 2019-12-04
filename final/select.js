@@ -161,6 +161,8 @@ function collectInfo(){
     relationSelect.appendChild(option3);
     relationSelect.appendChild(option4);
     
+    var nextBtn = document.getElementById("nextBtn");
+    nextBtn.classList.remove("disabled")
 }
 
 function toggleBorder(element){

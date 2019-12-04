@@ -14,6 +14,7 @@
         <h3>Digiwise</h3>
     </nav>
     <main>
+        <h2>Add legacy contacts</h2>
         <div id="legacyContainer" class='row'>
             <div class="card legacyCard"> 
             <div class="form-group">
@@ -34,7 +35,7 @@
                 
                 <div class="form-group">
                     <label for="tel">Tel</label>
-                    <input type="tel" class="form-control" id="telInput" placeholder="(xxx)xxx-xxxx" required>
+                    <input type="tel" class="form-control" maxlength="10" pattern="[0-9]{10}" id="telInput" placeholder="(xxx)xxx-xxxx" required>
                 </div>
                 <div class="form-group">
                         <label for="relationship">Relationship</label>
@@ -45,11 +46,11 @@
                           <option value="others">Others</option>
                         </select>
                       </div>
-                <button type="submit" class="btn btn-primary" onClick="collectInfo()">Done</button>
+                <button type="submit" class="btn btn-primary" onClick="collectInfo()" >Done</button>
                 </div>
             </div>
         </div>
-        <a href="dashboard.html" class="button_inactive">Next</a>
+        <a href="dashboard.html" id="nextBtn" class="button_active disabled">Next</a>
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

@@ -161,7 +161,7 @@ nav h3{
 }
 
 .button_inactive{
-    background-color:#4A90E2;
+    background-color:#9B9B9B;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -260,6 +260,13 @@ form{
     margin-bottom:5vh;
 }
 /* legacy contact */
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+    background-color:#9b9b9b;
+  }
+
 #legacyContainer{
     flex-wrap:nowrap;
     overflow-x: scroll;
