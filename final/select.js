@@ -23,6 +23,7 @@ function validate(){
     console.log("hi");
     var checked = document.getElementsByTagName('input');
     selectedAssets = [];
+    
     for (i=0; i<checked.length; i++){
         if (checked[i].checked){
             selectedAssets.push(checked[i].id)
@@ -45,17 +46,25 @@ function Contact(first,last,email,tel,relationship){
 function collectInfo(){
     var forms = document.getElementsByClassName("legacyCard");
     console.log(forms);
+    //clear storage
+    legacyContacts = [];
+    contactName = [];
+    var firstName = document.getElementsByClassName("first");
+    var lastName = document.getElementsByClassName("last");
+    var email = document.getElementsByClassName("emailInput");
+    var tel = document.getElementsByClassName("telInput");
+    var relationship  = document.getElementsByClassName("relationship");
+    // console.log(firstName);
+    // add information in to storage in loop
+    for (i=0;i<forms.length;i++){
+        var name = firstName[i].value + " " + lastName[i].value;
+        contactName.push(name);
+        var info = [firstName[i].value, lastName[i].value, email[i].value, tel[i].value, relationship[i].value];
+        legacyContacts.push(info);
 
-    // add information in to storage
-    var firstName = document.getElementById("first").value;
-    var lastName = document.getElementById("last").value;
-    var name = firstName +" "+ lastName;
-    var email = document.getElementById("emailInput").value;
-    var tel = document.getElementById("telInput").value;
-    var relationship  = document.getElementById("relationship").value;
-    var info = [firstName, lastName, email, tel, relationship];
-    legacyContacts.push(info);
-    contactName.push(name);
+    }
+
+ 
     console.log(contactName)
     localStorage.setItem("contactName",JSON.stringify(contactName));
     localStorage.setItem("legacyContacts",JSON.stringify(legacyContacts));
@@ -77,16 +86,14 @@ function collectInfo(){
     nameCol1.setAttribute("class","col");
     var input1 = document.createElement("input");
     input1.setAttribute("type","text");
-    input1.setAttribute("class","form-control");
     input1.setAttribute("placeholder","First name");
-    input1.setAttribute("id","first");
+    input1.setAttribute("class","form-control first");
     var nameCol2 = document.createElement("div");
     nameCol2.setAttribute("class","col");
     var input2 = document.createElement("input");
     input2.setAttribute("type","text");
-    input2.setAttribute("class","form-control");
     input2.setAttribute("placeholder","Last name");
-    input2.setAttribute("id","last");
+    input2.setAttribute("class","form-control last");
 
     var emailDiv = document.createElement("div");
     emailDiv.setAttribute("class","form-group");
@@ -95,9 +102,8 @@ function collectInfo(){
     emailLabel.innerHTML = "Email";
     var emailInput = document.createElement("input");
     emailInput.setAttribute("type","email");
-    emailInput.setAttribute("class","form-control");
+    emailInput.setAttribute("class","form-control emailInput");
     emailInput.setAttribute("aria-describedby","emailHelp");
-    emailInput.setAttribute("id","emailInput");
     emailInput.setAttribute("placeholder","Enter email");
 
     var telDiv = document.createElement("div");
@@ -107,8 +113,7 @@ function collectInfo(){
     telLabel.innerHTML = "Tel";
     var telInput = document.createElement("input");
     telInput.setAttribute("type","tel");
-    telInput.setAttribute("class","form-control");
-    telInput.setAttribute("id","telInput");
+    telInput.setAttribute("class","form-control telInput");
     telInput.setAttribute("placeholder","(xxx)xxx-xxxx");
 
     var relationDiv = document.createElement("div");
@@ -117,8 +122,7 @@ function collectInfo(){
     relationLabel.setAttribute("for","relationship");
     relationLabel.innerHTML = "Relationship";
     var relationSelect = document.createElement("select");
-    relationSelect.setAttribute("class","form-control");
-    relationSelect.setAttribute("id","relationship");
+    relationSelect.setAttribute("class","form-control relationship");
     var option1 = document.createElement("option");
     option1.innerHTML = "Family";
     option1.setAttribute("value","family");
