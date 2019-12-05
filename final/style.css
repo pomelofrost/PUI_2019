@@ -383,6 +383,8 @@ label{
 /* result */
 #result{
     padding:5em;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
 }
 
 #result p, #result h4{
