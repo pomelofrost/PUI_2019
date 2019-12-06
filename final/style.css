@@ -74,7 +74,7 @@ h2{
     font-family: neue-haas-grotesk-display,sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size:2em;
+    font-size:1.5em;
     line-height:1.5;
     margin-bottom:1vw;
 }
@@ -84,7 +84,7 @@ h3{
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size:1.5em;
+    font-size:1.2em;
     line-height:1.5;
 }
 
@@ -362,21 +362,27 @@ ul{
 }
 
 /* individual asset pages */
-#actions{
+
+.planContainer{
+    display:flex;
+}
+
+#actions, #contacts{
     border-radius:1em;
     border:none;
     background:white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
     padding:1em 3em;
-
+    margin-left:2vh;
 }
 
-#actions label{
-    margin: 3vh 20vw;
+.planContainer label{
+    margin: 2vh 0;
     border: 1px black solid;
     border-radius:20px;
     padding:20px;
     width: 30vw;
+
 }
 
 input[type="radio"]{
@@ -404,13 +410,16 @@ label{
 }
 
 .backBtn{
+    display:inline-block;
+    margin-left:0;
     color:black;
     text-align:left;
-    margin:3em 2em;
+    margin:2em 2em;
+    margin-top:5vh;
 }
 
 .backBtn:hover{
-    color:#4a90e2
+    color:#9b9b9b;
 }
 
 
