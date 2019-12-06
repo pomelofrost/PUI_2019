@@ -491,7 +491,13 @@ function parseResult(){
     //show on DOM
     var parentDiv = document.getElementById("result");
     var contacts = JSON.parse(localStorage.getItem("legacyContacts"));
-    console.log(contacts);
+    for (var j=0; j<contacts.length;j++){
+        var legacyInfo = document.createElement("div");
+        parentDiv.appendChild(legacyInfo);
+        var name = document.createElement("h4");
+        name.innerHtml = "Name: "+ contacts[j][0] + contacts[j][1];
+  
+    }
 
     for (var i = 0, len = assets.length; i < len; i++) {
         if(assets[i] == "Facebook"){

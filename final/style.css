@@ -66,7 +66,7 @@ h1{
     font-family: neue-haas-grotesk-display,sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size:4.2em;
+    font-size:4.2vw;
     line-height:1.5;
 }
 
@@ -74,7 +74,7 @@ h2{
     font-family: neue-haas-grotesk-display,sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size:1.5em;
+    font-size:1.5vw;
     line-height:1.5;
     margin-bottom:1vw;
 }
@@ -84,7 +84,7 @@ h3{
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size:1.2em;
+    font-size:1.2vw;
     line-height:1.5;
 }
 
@@ -92,7 +92,7 @@ h4{
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size:1.2em;
+    font-size:1.2vw;
     line-height:1.5;
 }
 
@@ -230,7 +230,7 @@ nav h3{
 
 .asset{
     margin:1vw;
-    padding:2.5vw 0;
+    padding:2.5vw 1vw;
     background-color:white;
     border-radius:20px;
     cursor:pointer;
@@ -242,7 +242,7 @@ nav h3{
 
 } */
 .asset img{
-    width:50%;
+    width:70%;
 }
 
 input[type="checkbox"] {
