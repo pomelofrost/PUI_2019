@@ -78,6 +78,8 @@ function collectInfo(){
     plus.setAttribute("onclick","newLegacyForm(this)");
     card.appendChild(plus);
     parentDiv.appendChild(card);
+    var nextBtn = document.getElementById("nextBtn");
+    nextBtn.classList.remove("disabled")
 }
 
 function newLegacyForm(plus){
@@ -175,8 +177,7 @@ function newLegacyForm(plus){
     relationSelect.appendChild(option3);
     relationSelect.appendChild(option4);
     
-    var nextBtn = document.getElementById("nextBtn");
-    nextBtn.classList.remove("disabled")
+
 }
 
 function toggleBorder(element){
@@ -489,6 +490,8 @@ function parseResult(){
     var assets = JSON.parse(localStorage.getItem("selectedAssets"));
     //show on DOM
     var parentDiv = document.getElementById("result");
+    var contacts = JSON.parse(localStorage.getItem("legacyContacts"));
+    console.log(contacts);
 
     for (var i = 0, len = assets.length; i < len; i++) {
         if(assets[i] == "Facebook"){
@@ -499,12 +502,12 @@ function parseResult(){
             var facebookContact = JSON.parse(localStorage.getItem("facebookContact"));
             
             var facebookPlanDom = document.createElement("p");
-
+            if (facebookPlan.length > 0){
             if (facebookPlan[0] =="memorialize"){
                 facebookPlanDom.innerHTML = "Memorialize Account, pass on to " + facebookContact[0];
             } else{                
                 facebookPlanDom.innerHTML = "Delete Account"
-        }
+        }}
         parentDiv.appendChild(facebookPlanDom);
     }
         if(assets[i] == "YouTube"){
@@ -515,7 +518,7 @@ function parseResult(){
             var youtubeContact = JSON.parse(localStorage.getItem("youtubeContact"));
             
             var youtubePlanDom = document.createElement("p");
-
+            if (youtubePlan.length > 0){
             if (youtubePlan[0] =="delete"){
                 youtubePlanDom.innerHTML = "Delete Channel"
             } if(youtubePlan[0] == "hide"){
@@ -523,7 +526,7 @@ function parseResult(){
             }
             else{                
                 youtubePlanDom.innerHTML = "Leave as it is"
-        }
+        }}
         
         parentDiv.appendChild(youtubePlanDom);
         }
@@ -536,7 +539,7 @@ function parseResult(){
             var linkedinContact = JSON.parse(localStorage.getItem("linkedinContact"));
             
             var linkedinPlanDom = document.createElement("p");
-
+            if (linkedinPlan.length > 0){
             if (linkedinPlan[0] =="close"){
                 linkedinPlanDom.innerHTML = "Close account"
             } if(linkedinPlan[0] == "cancel"){
@@ -544,7 +547,7 @@ function parseResult(){
             }
             else{                
                 linkedinPlanDom.innerHTML = "Leave as it is"
-        }
+        }}
         
         parentDiv.appendChild(linkedinPlanDom);
         }
@@ -557,13 +560,13 @@ function parseResult(){
             var twitterContact = JSON.parse(localStorage.getItem("twitterContact"));
             
             var twitterPlanDom = document.createElement("p");
-
+            if (twitterPlan.length > 0){
             if (twitterPlan[0] =="deactivate"){
                 twitterPlanDom.innerHTML = "Deactivate account"
             } 
             else{                
                 twitterPlanDom.innerHTML = "Leave as it is"
-        }
+        }}
         
         parentDiv.appendChild(twitterPlanDom);
         }
@@ -576,7 +579,7 @@ function parseResult(){
             var instagramContact = JSON.parse(localStorage.getItem("instagramContact"));
             
             var instagramPlanDom = document.createElement("p");
-
+            if (instagramPlan.length > 0){
             if (instagramPlan[0] =="archive"){
                 instagramPlanDom.innerHTML = "Download data and delete account, pass data to" + instagramContact[0]
             } if(instagramPlan[0] == "delete"){
@@ -584,7 +587,7 @@ function parseResult(){
             }
             else{                
                 instagramPlanDom.innerHTML = "Transfer ownership to " + instagramContact[0]
-        }
+        }}
         
         parentDiv.appendChild(instagramPlanDom);
         }
@@ -597,7 +600,7 @@ function parseResult(){
             var snapchatContact = JSON.parse(localStorage.getItem("snapchatContact"));
             
             var snapchatPlanDom = document.createElement("p");
-
+            if (snapchatPlan.length > 0){
             if (snapchatPlan[0] =="delete"){
                 snapchatPlanDom.innerHTML = "Delete Account"
             } if(snapchatPlan[0] == "download"){
@@ -605,7 +608,7 @@ function parseResult(){
             }
             else{                
                 snapchatPlanDom.innerHTML = "Leave as it is"
-        }
+        }}
         
         parentDiv.appendChild(snapchatPlanDom);
         }
@@ -618,7 +621,7 @@ function parseResult(){
             var messengerContact = JSON.parse(localStorage.getItem("messengerContact"));
             
             var messengerPlanDom = document.createElement("p");
-
+            if (messengerPlan.length > 0){
             if (messengerPlan[0] =="delete"){
                 messengerPlanDom.innerHTML = "Delete Channel"
             } if(messengerPlan[0] == "hide"){
@@ -626,7 +629,7 @@ function parseResult(){
             }
             else{                
                 messengerPlanDom.innerHTML = "Leave as it is"
-        }
+        }}
         
         parentDiv.appendChild(messengerPlanDom);
         }
@@ -639,7 +642,7 @@ function parseResult(){
             var whatsappContact = JSON.parse(localStorage.getItem("whatsappContact"));
             
             var whatsappPlanDom = document.createElement("p");
-
+            if (whatsappPlan.length > 0){
             if (whatsappPlan[0] =="delete"){
                 whatsappPlanDom.innerHTML = "Delete Channel"
             } if(whatsappPlan[0] == "hide"){
@@ -647,7 +650,7 @@ function parseResult(){
             }
             else{                
                 whatsappPlanDom.innerHTML = "Leave as it is"
-        }
+        }}
         
         parentDiv.appendChild(whatsappPlanDom);
         }
