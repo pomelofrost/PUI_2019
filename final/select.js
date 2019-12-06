@@ -69,11 +69,21 @@ function collectInfo(){
     localStorage.setItem("contactName",JSON.stringify(contactName));
     localStorage.setItem("legacyContacts",JSON.stringify(legacyContacts));
     
-    // display another form
+    // display tentative add contact
     var parentDiv = document.getElementById("legacyContainer");
     var card = document.createElement("div")
-    card.setAttribute("class","card legacyCard");
+    card.setAttribute("class","card legacyCard clickable");
+    var plus = document.createElement("i");
+    plus.setAttribute("class","fas fa-plus");
+    plus.setAttribute("onclick","newLegacyForm(this)");
+    card.appendChild(plus);
+    parentDiv.appendChild(card);
+}
 
+function newLegacyForm(plus){
+    var card = plus.parentElement;
+    card.classList.remove("clickable");
+    plus.remove();
     var nameDiv = document.createElement("div");
     nameDiv.setAttribute("class","form-group");
     var nameLabel = document.createElement("label");
@@ -142,7 +152,7 @@ function collectInfo(){
     submitBtn.setAttribute("onClick","collectInfo()")
     submitBtn.innerHTML = "Done";
     // append
-    parentDiv.appendChild(card);
+    
     card.appendChild(nameDiv);
     card.appendChild(emailDiv);
     card.appendChild(telDiv);
@@ -643,4 +653,8 @@ function parseResult(){
         }
     }
 
+}
+
+function clearAll(){
+    localStorage.clear();
 }
