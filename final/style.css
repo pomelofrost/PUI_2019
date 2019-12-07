@@ -198,11 +198,11 @@ nav h3{
     animation-delay: 10s;
   }
 
-.fullbleed h1{
+#index h1{
     margin:10vh 20vw;
 }
 
-.fullbleed h4{
+#index h4{
     margin:10vh 20vw;
     font-family: neue-haas-grotesk-display, sans-serif;
     font-weight: 400;
@@ -498,14 +498,14 @@ label{
         font-style: normal;
         font-size:1em;
         line-height:1.2;
-        text-align:left
+        text-align:left;
     }
     
-    .fullbleed h1{
+    #index h1{
         margin:5vh 5vw 2vh 5vw;
     }
     
-    .fullbleed h4{
+    #index h4{
         margin:2vh 5vw;
     }
 
