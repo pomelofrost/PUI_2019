@@ -459,7 +459,7 @@ label{
         font-family: neue-haas-grotesk-display,sans-serif;
         font-weight: 600;
         font-style: normal;
-        font-size:2em;
+        font-size:3em;
         line-height:1.5;
     }
     
@@ -467,7 +467,7 @@ label{
         font-family: neue-haas-grotesk-display,sans-serif;
         font-weight: 600;
         font-style: normal;
-        font-size:1em;
+        font-size:2em;
         line-height:1.5;
         margin-bottom:1vw;
     }
@@ -477,7 +477,7 @@ label{
         font-family: neue-haas-grotesk-text, sans-serif;
         font-weight: 600;
         font-style: normal;
-        font-size:1em;
+        font-size:1.5em;
         line-height:1.5;
     }
     
@@ -485,7 +485,7 @@ label{
         font-family: neue-haas-grotesk-text, sans-serif;
         font-weight: 600;
         font-style: normal;
-        font-size:1em;
+        font-size:1.2em;
         line-height:1.5;
     }
     
@@ -493,7 +493,7 @@ label{
         font-family: neue-haas-grotesk-text, sans-serif;
         font-weight: 300;
         font-style: normal;
-        font-size:0.8em;
+        font-size:1em;
         line-height:1.5;
     }
     
@@ -501,7 +501,7 @@ label{
         font-family: neue-haas-grotesk-text, sans-serif;
         font-weight: 400;
         font-style: normal;
-        font-size:0.8em;
+        font-size:1em;
         line-height:1.5;
         text-align:left;
     }
@@ -509,7 +509,7 @@ label{
         font-family: neue-haas-grotesk-display,sans-serif;
         font-weight: 600;
         font-style: normal;
-        font-size:0.8em;
+        font-size:1em;
         line-height:1.5;
         color:white;
         text-decoration:none;
@@ -524,7 +524,7 @@ label{
         background-color: white;
         border-radius: 10px;
         cursor: pointer;
-        width: 80%;
+        width: 90%;
     }
 
     label{
