@@ -556,7 +556,15 @@ label{
     }
     
     .form-control{
-        font-size:0.7em;
+        font-size:1em;
+    }
+
+    select, .btn {
+        font-size:1em;
+    }
+
+    .row{
+        display:block;
     }
 }
 /* tablet */
