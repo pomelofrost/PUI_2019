@@ -198,7 +198,7 @@ nav h3{
     animation-delay: 10s;
   }
 
-  .fullbleed h1{
+.fullbleed h1{
     margin:10vh 20vw;
 }
 
@@ -500,7 +500,7 @@ label{
     }
     
     .fullbleed h4{
-        margin:5vh 5vw 2vh 5vw;
+        margin:2vh 5vw;
     }
 
     p,form{
