@@ -532,7 +532,10 @@ label{
         display:flex;
         align-items: center;
     }
-
+    
+    label p{
+        text-align:left;
+    }
     label h3, .product h3{
         margin-left:3vw;
     }
@@ -584,7 +587,8 @@ label{
 
     .planContainer label{
        width:90%;
-       margin:auto;
+       margin:2vh auto;
+       padding:10px;
     }
 }
 /* tablet */
