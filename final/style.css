@@ -59,7 +59,7 @@ nav{
 }
 main{
     margin:3vw;
-    padding-top:3vw;
+    padding-top:2vw;
 }
 /* typography */
 h1{
@@ -230,19 +230,16 @@ nav h3{
 
 .asset{
     margin:1vw;
-    padding:2.5vw 1vw;
+    padding:2.5vw 0;
     background-color:white;
     border-radius:20px;
     cursor:pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
-/* .asset:hover{
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.08);
 
-} */
 .asset img{
-    width:70%;
+    width:50%;
 }
 
 input[type="checkbox"] {
@@ -392,11 +389,20 @@ input[type="radio"]{
 input[type="radio"]:checked+ label{
     background:#4A90E2;
     color:white;
-    border: 1px white solid;
+    border: 1px black solid;
 }
 
 label{
     text-align:center;
+}
+
+.form-check-input:disabled~.form-check-label {
+    color:black;
+}
+
+.form-check-input:disabled~input[type="radio"]:checked+label{
+    color:white;
+    background-color:#9b9b9b;
 }
 
 .asset a{
