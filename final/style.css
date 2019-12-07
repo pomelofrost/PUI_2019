@@ -527,13 +527,13 @@ label{
         width: 90%;
     }
 
-    label{
+    label, .product{
         text-align:center;
         display:flex;
         align-items: center;
     }
 
-    label h3{
+    label h3, .product h3{
         margin-left:3vw;
     }
 
@@ -546,9 +546,10 @@ label{
     }
 
     .legacyCard {
-        width: 100%;
+        width: 93%;
         padding: 6vw;
         margin-left: 3vw;
+        margin-top:3vw;
         border-radius: 30px;
         border: none;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
@@ -565,6 +566,24 @@ label{
 
     .row{
         display:block;
+    }
+
+    .clickable{
+        height:400px;
+        text-align:center;
+        font-size:16vw;
+    }
+
+    .planContainer{
+        display:block;
+    }
+
+    .form-check-label{
+        display:block;
+    }
+
+    .planContainer label{
+        margin:0px;
     }
 }
 /* tablet */
