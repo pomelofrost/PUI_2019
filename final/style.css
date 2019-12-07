@@ -67,7 +67,7 @@ h1{
     font-weight: 600;
     font-style: normal;
     font-size:4.2em;
-    line-height:1.5;
+    line-height:1.2;
 }
 
 h2{
@@ -89,11 +89,11 @@ h3{
 }
 
 h4{
-    font-family: neue-haas-grotesk-text, sans-serif;
-    font-weight: 600;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-size:1.2em;
-    line-height:1.5;
+    font-size:2em;
+    line-height:1.2;
 }
 
 p,form{
@@ -199,6 +199,10 @@ nav h3{
   }
 
   .fullbleed h1{
+    margin:10vh 20vw;
+}
+
+.fullbleed h4{
     margin:10vh 20vw;
 }
 
@@ -461,6 +465,7 @@ label{
         font-style: normal;
         font-size:2em;
         line-height:1.2;
+        text-align:left
     }
     
     h2{
@@ -487,8 +492,17 @@ label{
         font-style: normal;
         font-size:1em;
         line-height:1.2;
+        text-align:left
     }
     
+    .fullbleed h1{
+        margin:5vh 5vw;
+    }
+    
+    .fullbleed h4{
+        margin:5vh 5vw;
+    }
+
     p,form{
         font-family: neue-haas-grotesk-text, sans-serif;
         font-weight: 300;
