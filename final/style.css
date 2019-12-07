@@ -515,13 +515,26 @@ label{
         text-decoration:none;
     }
 
+    .asset img{
+        width:20%;
+    }
     .asset {
-        margin: 1vw;
-        padding: 2.5vw 0;
+        margin: 3vw;
+        padding: 3vw;
         background-color: white;
-        border-radius: 20px;
+        border-radius: 10px;
         cursor: pointer;
         box-shadow: 
+    }
+
+    label{
+        text-align:center;
+        display:flex;
+        align-items: center;
+    }
+
+    label h3{
+        margin-left:3vw;
     }
 }
 /* tablet */
