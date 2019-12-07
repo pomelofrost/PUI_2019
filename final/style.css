@@ -397,13 +397,9 @@ label{
 }
 
 .form-check-input:disabled~.form-check-label {
-    color:black;
+    color:#e8e8e8;
 }
 
-.form-check-input:disabled~input[type="radio"]:checked+label{
-    color:white;
-    background-color:#9b9b9b;
-}
 
 .asset a{
     padding-top:10px;
