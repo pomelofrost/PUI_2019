@@ -610,6 +610,20 @@ label{
        margin:2vh auto;
        padding:10px;
     }
+
+    #result{
+        display:block;
+        padding:3vw;
+    }
+
+    #result h3{
+        padding-top:3vh;
+        padding-bottom:3vh;
+    }
+
+    #result a{
+        margin-bottom:30px;
+    }
 }
 /* tablet */
 @media (max-width: 768px) {
