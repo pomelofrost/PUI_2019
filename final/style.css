@@ -565,14 +565,14 @@ label{
 
     #legacyContainer {
         flex-wrap: nowrap;
-        overflow-x: scroll;
-        overflow-y: hidden;
+        overflow-x: hidden;
+        /* overflow-y: hidden; */
         white-space: nowrap;
         padding: 30px 0;
     }
 
     .legacyCard {
-        width: 90%;
+        width: 93%;
         padding: 6vw;
         margin-left: 3vw;
         margin-top:3vw;
