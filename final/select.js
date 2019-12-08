@@ -204,7 +204,7 @@ function parseList(){
         var smallDiv = document.createElement("div");
         smallDiv.setAttribute("class","card asset")
         var link = document.createElement("a");
-        link.setAttribute("href",name+".html")
+        link.setAttribute("href","asset/"+name+".html")
         var asset = document.createElement("div");
         asset.setAttribute("class","product");
         // attach image
