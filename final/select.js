@@ -220,6 +220,7 @@ function parseList(){
         asset.appendChild(imgNode);
         asset.appendChild(assetName);
 
+
     }
 }
 
@@ -518,12 +519,12 @@ function parseResult(){
             var facebookContact = JSON.parse(localStorage.getItem("facebookContact"));
             
             var facebookPlanDom = document.createElement("p");
-            if (facebookPlan.length > 0){
+            if (facebookPlan != null){
             if (facebookPlan[0] =="memorialize"){
                 facebookPlanDom.innerHTML = "Memorialize Account, pass on to " + facebookContact[0];
             } else{                
                 facebookPlanDom.innerHTML = "Delete Account"
-        }}
+        }}else{facebookPlanDom.innerHTML="Not Planned Yet"}
         parentDiv.appendChild(facebookPlanDom);
     }
         if(assets[i] == "YouTube"){
@@ -534,7 +535,7 @@ function parseResult(){
             var youtubeContact = JSON.parse(localStorage.getItem("youtubeContact"));
             
             var youtubePlanDom = document.createElement("p");
-            if (youtubePlan.length > 0){
+            if (youtubePlan != null){
             if (youtubePlan[0] =="delete"){
                 youtubePlanDom.innerHTML = "Delete Channel"
             } if(youtubePlan[0] == "hide"){
@@ -542,7 +543,7 @@ function parseResult(){
             }
             else{                
                 youtubePlanDom.innerHTML = "Leave as it is"
-        }}
+        }}else{youtubePlanDom.innerHTML="Not Planned Yet"}
         
         parentDiv.appendChild(youtubePlanDom);
         }
@@ -555,7 +556,7 @@ function parseResult(){
             var linkedinContact = JSON.parse(localStorage.getItem("linkedinContact"));
             
             var linkedinPlanDom = document.createElement("p");
-            if (linkedinPlan.length > 0){
+            if (linkedinPlan != null){
             if (linkedinPlan[0] =="close"){
                 linkedinPlanDom.innerHTML = "Close account"
             } if(linkedinPlan[0] == "cancel"){
@@ -563,7 +564,7 @@ function parseResult(){
             }
             else{                
                 linkedinPlanDom.innerHTML = "Leave as it is"
-        }}
+        }}else{linkedinPlanDom.innerHTML="Not Planned Yet"}
         
         parentDiv.appendChild(linkedinPlanDom);
         }
@@ -576,13 +577,13 @@ function parseResult(){
             var twitterContact = JSON.parse(localStorage.getItem("twitterContact"));
             
             var twitterPlanDom = document.createElement("p");
-            if (twitterPlan.length > 0){
+            if (twitterPlan != null){
             if (twitterPlan[0] =="deactivate"){
                 twitterPlanDom.innerHTML = "Deactivate account"
             } 
             else{                
                 twitterPlanDom.innerHTML = "Leave as it is"
-        }}
+        }}else{twitterPlanDom.innerHTML="Not Planned Yet"}
         
         parentDiv.appendChild(twitterPlanDom);
         }
@@ -595,7 +596,7 @@ function parseResult(){
             var instagramContact = JSON.parse(localStorage.getItem("instagramContact"));
             
             var instagramPlanDom = document.createElement("p");
-            if (instagramPlan.length > 0){
+            if (instagramPlan != null){
             if (instagramPlan[0] =="archive"){
                 instagramPlanDom.innerHTML = "Download data and delete account, pass data to" + instagramContact[0]
             } if(instagramPlan[0] == "delete"){
@@ -603,7 +604,7 @@ function parseResult(){
             }
             else{                
                 instagramPlanDom.innerHTML = "Transfer ownership to " + instagramContact[0]
-        }}
+        }}else{instagramPlanDom.innerHTML="Not Planned Yet"}
         
         parentDiv.appendChild(instagramPlanDom);
         }
@@ -616,7 +617,7 @@ function parseResult(){
             var snapchatContact = JSON.parse(localStorage.getItem("snapchatContact"));
             
             var snapchatPlanDom = document.createElement("p");
-            if (snapchatPlan.length > 0){
+            if (snapchatPlan != null){
             if (snapchatPlan[0] =="delete"){
                 snapchatPlanDom.innerHTML = "Delete Account"
             } if(snapchatPlan[0] == "download"){
@@ -624,7 +625,7 @@ function parseResult(){
             }
             else{                
                 snapchatPlanDom.innerHTML = "Leave as it is"
-        }}
+        }}else{snapchatPlanDom.innerHTML="Not Planned Yet"}
         
         parentDiv.appendChild(snapchatPlanDom);
         }
@@ -637,7 +638,7 @@ function parseResult(){
             var messengerContact = JSON.parse(localStorage.getItem("messengerContact"));
             
             var messengerPlanDom = document.createElement("p");
-            if (messengerPlan.length > 0){
+            if (messengerPlan != null){
             if (messengerPlan[0] =="delete"){
                 messengerPlanDom.innerHTML = "Delete Channel"
             } if(messengerPlan[0] == "hide"){
@@ -645,7 +646,7 @@ function parseResult(){
             }
             else{                
                 messengerPlanDom.innerHTML = "Leave as it is"
-        }}
+        }}else{messengerPlanDom.innerHTML="Not Planned Yet"}
         
         parentDiv.appendChild(messengerPlanDom);
         }
@@ -658,7 +659,7 @@ function parseResult(){
             var whatsappContact = JSON.parse(localStorage.getItem("whatsappContact"));
             
             var whatsappPlanDom = document.createElement("p");
-            if (whatsappPlan.length > 0){
+            if (whatsappPlan!= null){
             if (whatsappPlan[0] =="delete"){
                 whatsappPlanDom.innerHTML = "Delete Channel"
             } if(whatsappPlan[0] == "hide"){
@@ -666,7 +667,7 @@ function parseResult(){
             }
             else{                
                 whatsappPlanDom.innerHTML = "Leave as it is"
-        }}
+        }}else{whatsappPlanDom.innerHTML="Not Planned Yet"}
         
         parentDiv.appendChild(whatsappPlanDom);
         }
