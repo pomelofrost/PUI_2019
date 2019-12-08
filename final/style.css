@@ -371,6 +371,7 @@ ul{
 /* individual asset pages */
 
 .planContainer{
+    margin-top:6vh;
     display:flex;
 }
 
@@ -580,7 +581,9 @@ label{
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
         text-align: left;
     }
-    
+    #contacts{
+        margin-top:3vh;
+    }
     .form-control{
         font-size:1em;
     }

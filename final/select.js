@@ -495,7 +495,8 @@ function parseResult(){
         var legacyInfo = document.createElement("div");
         parentDiv.appendChild(legacyInfo);
         var nameTitle = document.createElement("h4");
-        nameTitle.innerHTML = "Primary Contact" 
+        var num = j+1
+        nameTitle.innerHTML = "Legacy Contact "+ num;
         var name = document.createElement("p");
         name.innerHTML = contacts[j][0] + contacts[j][1];
         var email = document.createElement("p");
