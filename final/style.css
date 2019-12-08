@@ -199,11 +199,11 @@ nav h3{
   }
 
 #index h1{
-    margin:10vh 20vw;
+    margin:6vh 20vw;
 }
 
 #index h4{
-    margin:6vh 20vw;
+    margin:0 20vw 3vh 20vw;
     font-family: neue-haas-grotesk-display, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -283,6 +283,7 @@ a.disabled {
 }
 .legacyCard{
     width:33vw;
+    min-width:33vw;
     padding: 6vw;
     margin-left:3vw;
     border-radius:30px;
@@ -295,7 +296,7 @@ a.disabled {
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size:1vw;
+    font-size:1em;
     line-height:1.5;
     text-align:left;
 }
@@ -520,7 +521,7 @@ label{
     
     label{
         font-family: neue-haas-grotesk-text, sans-serif;
-        font-weight: 400;
+        font-weight: 700;
         font-style: normal;
         font-size:1em;
         line-height:1.5;
@@ -627,7 +628,9 @@ label{
     }
 }
 /* tablet */
-@media (max-width: 768px) {
-    
+@media (max-width: 768px) and (min-width:577px) {
+    .legacyCard{
+        width: 70%;
+    }
 
 }
