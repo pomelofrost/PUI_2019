@@ -472,7 +472,7 @@ label{
         font-weight: 600;
         font-style: normal;
         font-size:2em;
-        line-height:1.2;
+        line-height:1.5;
         text-align:left
     }
     
@@ -481,7 +481,7 @@ label{
         font-weight: 600;
         font-style: normal;
         font-size:1.5em;
-        line-height:1.2;
+        line-height:1.5;
         margin-bottom:1vw;
     }
     
@@ -491,7 +491,7 @@ label{
         font-weight: 600;
         font-style: normal;
         font-size:1em;
-        line-height:1.2;
+        line-height:1.5;
     }
     
     h4{
@@ -499,17 +499,17 @@ label{
         font-weight: 400;
         font-style: normal;
         font-size:1em;
-        line-height:1.2;
+        line-height:1.5;
         text-align:left;
     }
     
     #index h1{
-        margin:5vh 5vw 2vh 5vw;
+        margin:10vh 5vw 5vh 5vw;
     }
     
     #index h4{
-        margin:2vh 5vw;
-        font-size:1em;
+        margin:5vh 5vw;
+        font-size:1.2em;
     }
 
     p,form{
