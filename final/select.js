@@ -640,9 +640,9 @@ function parseResult(){
             var messengerPlanDom = document.createElement("p");
             if (messengerPlan != null){
             if (messengerPlan[0] =="delete"){
-                messengerPlanDom.innerHTML = "Delete Channel"
-            } if(messengerPlan[0] == "hide"){
-                messengerPlanDom.innerHTML = "Hide Channel"
+                messengerPlanDom.innerHTML = "Delete account"
+            } if(messengerPlan[0] == "archive"){
+                messengerPlanDom.innerHTML = "Download Messenger chat history"
             }
             else{                
                 messengerPlanDom.innerHTML = "Leave as it is"
@@ -661,9 +661,9 @@ function parseResult(){
             var whatsappPlanDom = document.createElement("p");
             if (whatsappPlan!= null){
             if (whatsappPlan[0] =="delete"){
-                whatsappPlanDom.innerHTML = "Delete Channel"
-            } if(whatsappPlan[0] == "hide"){
-                whatsappPlanDom.innerHTML = "Hide Channel"
+                whatsappPlanDom.innerHTML = "Permanenty delete account"
+            } if(whatsappPlan[0] == "clearChat"){
+                whatsappPlanDom.innerHTML = "Delete and clear all chat"
             }
             else{                
                 whatsappPlanDom.innerHTML = "Leave as it is"
