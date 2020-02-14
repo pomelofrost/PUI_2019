@@ -376,18 +376,21 @@ ul{
 }
 
 #actions, #contacts{
-    border-radius:1em;
+    /* border-radius:1em; */
     border:none;
     background:white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-    padding:1em 3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.16);
+    padding:2em 3em;
     margin-left:2vh;
 }
 
+#actions label{
+    text-align:left;
+}
 .planContainer label{
     margin: 2vh 0;
     border: 1px black solid;
-    border-radius:20px;
+    /* border-radius:20px; */
     padding:20px;
     width: 30vw;
 
@@ -453,11 +456,13 @@ label{
 #result h3{
     grid-column-start:1;
     grid-column-end:6;
+    font-size:1.5em;
 }
 
 #result h4{
     grid-column-start:1;
     grid-column-end:2;
+    color:#9B9B9B;
 }
 
 #result p{
@@ -624,6 +629,7 @@ label{
     #result h3{
         padding-top:3vh;
         padding-bottom:3vh;
+        
     }
 
     #result a{
